@@ -1,0 +1,21 @@
+.consult
+	.containerWide
+		.consult-wrap
+			.container
+				.consult-block
+					.consult-block-left
+						.consult-block-left__title Остались вопросы<br> или <span>нужна консультация?</span>
+						.consult-block-left__text Заполните два поля и в течении 5 минут с вами свяжется менеджер
+						.consult-block-left-main
+							form.consult-block-left-main-form(action="")
+								.consult-block-left-main-form-pair
+									label(for="name") Как вас зовут
+									input(type="text", name="name", id="name", placeholder="Андрей")
+								.consult-block-left-main-form-pair
+									label(for="tel") Телефон
+									input(type="tel", name="tel", id="tel", placeholder="+7 812 999 23 44")
+							.consult-block-left-main-btn 
+								a.consult-block-left-main-btn__link(href="#") Заказать звонок
+						.consult-block-left__privacy Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конциденциальности
+					.consult-block-right
+						img.consult-block-right__img(src="assets/images/consult-tanya.jpg", alt="consult")

@@ -1,0 +1,6 @@
+@mixin w1366 {
+	@media screen and (max-width: 1440px){
+		@content
+	}
+}
+

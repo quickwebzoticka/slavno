@@ -1,0 +1,263 @@
+extends ../template
+
+block variables
+	- var title = 'Главная'
+
+block content
+	.first-bg
+		.banner
+			.container
+				.banner-block
+					.banner-block-left
+						.banner-block-left__title Продаем 
+							span.redText земельные участки 
+							span.smallText со всеми коммуникациями в 5&nbsp;км. от КАД
+						.banner-block-left__text В охраняемых коттеджных поселках от 800 тыс. рублей
+						.banner-block-left-but 
+							a.banner-block-left-but__link(href="#") Подобрать участок
+					.banner-block-right
+						.banner-block-right-item
+							img.banner-block-right-item__img(src="assets/images/banner-item1.png", alt="advantage")
+							.banner-block-right-item-right
+								.banner-block-right-item-right__title 5-7 км
+								.banner-block-right-item-right__text От Санкт-Петербурга
+						.banner-block-right-item
+							img.banner-block-right-item__img(src="assets/images/banner-item2.png", alt="advantage")
+							.banner-block-right-item-right
+								.banner-block-right-item-right__title Развитая инфраструтура
+								.banner-block-right-item-right__text Все объекты<br> в 10 минутах езды<br> от поселка
+						.banner-block-right-item
+							img.banner-block-right-item__img(src="assets/images/banner-item3.png", alt="advantage")
+							.banner-block-right-item-right
+								.banner-block-right-item-right__title Без посредников
+								.banner-block-right-item-right__text Участки<br> в собственности девелопера
+		.filter
+			.containerWide
+				.filter-wrap
+					.container
+						.filter-block
+							.filter-block-left
+								img.filter-block-left__img(src="assets/images/filter-man.png", alt="consult")
+							form.filter-block-right(action="")
+								.filter-block-right__title Подберите себе<br> идеальный для жизни участок <span>за 30 секунд</span>
+								.filter-block-right-row
+									.filter-block-right-cost 
+										.filter-block-right-cost__title Стоимость
+										.filter-block-right-cost-inputs
+											.filter-block-right-cost-block
+												input.filter-block-right-cost__input(type="number" id="firstPrice" name="input-vol" min="0" max="200")
+												input.filter-block-right-cost__rangeInput(type="range" min="0" max="200" value="50" step="1" id="rangeInputFirstPrice")
+											img.filter-block-right-cost__img(src="assets/images/filter-line.png", alt="line")
+											.filter-block-right-cost-block
+												input.filter-block-right-cost__input(type="number" id="secondPrice" name="input-vol" min="0" max="200")
+												input.filter-block-right-cost__rangeInput(type="range" min="0" max="200" value="50" step="1" id="rangeInputSecondPrice")
+									.filter-block-right-square
+										.filter-block-right-square__title Площадь
+										.filter-block-right-square-inputs
+											.filter-block-right-square-block
+												input.filter-block-right-square__input(type="number" id="firstSquare" name="input-vol" min="0" max="200")
+												input.filter-block-right-cost__rangeInput(type="range" min="0" max="200" value="50" step="1" id="rangeInputFirstSquare")
+											img.filter-block-right-cost__img(src="assets/images/filter-line.png", alt="line")
+											.filter-block-right-square-block
+												input.filter-block-right-square__input(type="number" id="secondSquare" name="input-vol" min="0" max="200")
+												input.filter-block-right-cost__rangeInput(type="range" min="0" max="200" value="50" step="1" id="rangeInputSecondSquare")
+								.filter-block-right-row
+									.filter-block-right-status
+										.filter-block-right-status__title Статус участка
+										input.filter-block-right-status__check(type="checkbox" id="DPK")
+										label.filter-block-right-status__label(for="DPK") ДПК с пропиской
+										input.filter-block-right-status__check(type="checkbox" id="IZS")
+										label.filter-block-right-status__label(for="IZS") ИЖС
+									.filter-block-right-comm
+										.filter-block-right-comm__title Коммуникации
+										select.filter-block-right-comm__select(multiple="multiple")
+											option Вода
+											option Газ
+											option Канализация
+											option Электричество
+								.filter-block-right-row
+									.filter-block-right-but 
+										a.filter-block-right-but__link(href="#") Подобрать участок
+									.filter-block-right-output Найдено
+										span 42 участка
+
+	.second-bg
+		.actions
+			.container
+				.actions-block
+					.actions-block-item
+						img.actions-block-item__img(src="assets/images/action1.png", alt="action")
+						.actions-block-item-right
+							a.actions-block-item-right__title(href="#") Беспроцентная<br>
+								span.actions-block-item-right__subtitle рассрочка - 2 года
+							.actions-block-item-right__text Без первоначального взноса
+					.actions-block-item
+						img.actions-block-item__img(src="assets/images/action2.png", alt="action")
+						.actions-block-item-right
+							a.actions-block-item-right__title(href="#") 99 тысяч рублей<br>
+								span.actions-block-item-right__subtitle за сотку
+							.actions-block-item-right__text В посёлке "Иннола Парк", при единовременной оплате
+					.actions-block-item
+						img.actions-block-item__img(src="assets/images/action3.png", alt="action")
+						.actions-block-item-right
+							a.actions-block-item-right__title(href="#") Скидка - 10%<br>
+								span.actions-block-item-right__subtitle на землю
+							.actions-block-item-right__text При единовременной оплате
+					a.actions-block-more(href="#") <span>Смотреть остальные спецпредложения </span>
+		.choice
+			.container
+				.choice-block
+					.choice-block__title Выберите свой
+						span коттеджный поселок
+					.choice-block-main
+						.choice-block-main-left
+							img.choice-block-main-left__img(src="assets/images/logo-park.png", alt="logo-park")
+							.choice-block-main-left-item
+								.choice-block-main-left-item__title 7 км. от КАД
+								.choice-block-main-left-item__text Если гнать с ветерком, то за 10 мин. доедите
+							.choice-block-main-left-item
+								.choice-block-main-left-item__title От 800 тысяч рублей
+								.choice-block-main-left-item__text Чем дольше думаете, тем дороже
+							.choice-block-main-left-item
+								.choice-block-main-left-item__title Статус ДПК с пропиской
+								.choice-block-main-left-item__text Обязательно пропишем, не переживайте
+							.choice-block-main-left-but
+								a.choice-block-main-left-but__link(href="#") Узнать подробнее
+						.choice-block-main-right
+							img.choice-block-main-right__img(src="assets/images/logo-gorod.png", alt="logo-gorod")
+							.choice-block-main-right-item
+								.choice-block-main-right-item__title 5 км. от КАД
+								.choice-block-main-right-item__text Если гнать с ветерком, то за 7 мин. доедите
+							.choice-block-main-right-item
+								.choice-block-main-right-item__title От 1 млн. 200 тысяч рублей
+								.choice-block-main-right-item__text в 2019 году цены вырастут в 1.5 раза
+							.choice-block-main-right-item
+								.choice-block-main-right-item__title Статус ИЖС
+								.choice-block-main-right-item__text Здесь какая-то плюшка с ИЖС
+							.choice-block-main-right-but
+								a.choice-block-main-right-but__link(href="#") Узнать подробнее
+		.slider
+			.container
+				.slider__title Уже куплено <span>около 60% участков</span> в посёлке Иннола парк <span>и&nbsp;более&nbsp;30%</span> в Изумрудном городе
+				.slider__text Люди строят дома, а так же есть и те, кто готовится к заселению
+			.containerWide
+				.slider-block
+					.slider-block-prev
+						img.slider-block-prev__img(src="", alt="arrow-prev")
+					.slider-block-inn
+						.slider-block-item
+							img(src="assets/images/foto-slider.jpg", alt="slider-foto")
+							.slider-block-item-hover
+								img.slider-block-item-hover__img(src="assets/images/more-icon.png", alt="more")
+						.slider-block-item
+							img(src="assets/images/foto-slider.jpg", alt="slider-foto")
+							.slider-block-item-hover
+								img.slider-block-item-hover__img(src="assets/images/more-icon.png", alt="more")
+						.slider-block-item
+							img(src="assets/images/foto-slider.jpg", alt="slider-foto")
+							.slider-block-item-hover
+								img.slider-block-item-hover__img(src="assets/images/more-icon.png", alt="more")
+						.slider-block-item
+							img(src="assets/images/foto-slider.jpg", alt="slider-foto")
+							.slider-block-item-hover
+								img.slider-block-item-hover__img(src="assets/images/more-icon.png", alt="more")
+						.slider-block-item
+							img(src="assets/images/foto-slider.jpg", alt="slider-foto")
+							.slider-block-item-hover
+								img.slider-block-item-hover__img(src="assets/images/more-icon.png", alt="more")
+					.slider-block-next
+						img.slider-block-next__img(src="", alt="arrow-next")
+	.third-bg
+		.economy
+			.container
+				.economy-block
+					.economy__title Сэкономьте от 120 000 рублей <span>на покупке участка со всеми коммуникациями</span>
+					.economy__text Акция действительна до: <span>31 декабря 2018 года</span>
+		.uchastki
+			.container
+				.uchastki-block
+					.uchastki-item
+						.uchastki-item-inn
+							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+							.uchastki-item__title Участок №416
+							.uchastki-item-square
+								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+								.uchastki-item-square__text 8 соток
+							.uchastki-item-price
+								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+								.uchastki-item-price-text
+									.uchastki-item-price-text-oldprice 1 200 350 руб.
+									.uchastki-item-price-text-newprice 1 200 350 руб.
+							.uchastki-item-btn
+								a.uchastki-item-btn__link Посмотреть участок
+					.uchastki-item
+						.uchastki-item-inn
+							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+							.uchastki-item__title Участок №416
+							.uchastki-item-square
+								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+								.uchastki-item-square__text 8 соток
+							.uchastki-item-price
+								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+								.uchastki-item-price-text
+									.uchastki-item-price-text-oldprice 1 200 350 руб.
+									.uchastki-item-price-text-newprice 1 200 350 руб.
+							.uchastki-item-btn
+								a.uchastki-item-btn__link Посмотреть участок
+					.uchastki-item
+						.uchastki-item-inn
+							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+							.uchastki-item__title Участок №416
+							.uchastki-item-square
+								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+								.uchastki-item-square__text 8 соток
+							.uchastki-item-price
+								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+								.uchastki-item-price-text
+									.uchastki-item-price-text-oldprice 1 200 350 руб.
+									.uchastki-item-price-text-newprice 1 200 350 руб.
+							.uchastki-item-btn
+								a.uchastki-item-btn__link Посмотреть участок
+					.uchastki-item
+						.uchastki-item-inn
+							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+							.uchastki-item__title Участок №416
+							.uchastki-item-square
+								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+								.uchastki-item-square__text 8 соток
+							.uchastki-item-price
+								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+								.uchastki-item-price-text
+									.uchastki-item-price-text-oldprice 1 200 350 руб.
+									.uchastki-item-price-text-newprice 1 200 350 руб.
+							.uchastki-item-btn
+								a.uchastki-item-btn__link Посмотреть участок
+		.doverie
+			.container
+				.doverie-block
+					.doverie-block__title Почему вы <span>можете нам доверять</span>
+					.doverie-block-main
+						img.doverie-block-main__img(src="assets/images/trust-man.png", alt="doverie")
+						.doverie-block-main-left
+							.doverie-block-main-left-inn
+								.doverie-block-main-left-inn__text Наша компания существует на рынке с 2017 года.  Поэтому сейчас нам крайне важно выполнить все свои обязательства в срок. Чтобы заслужить статус «надёжного девелопера»
+								.doverie-block-main-left-inn__author Павлов Александр Владимирович  
+								.doverie-block-main-left-inn__prof — генеральный директор компании «Славные просторы»
+						.doverie-block-main-right
+							.doverie-block-main-right-item
+								.doverie-block-main-right-item__title Мы не переплачиваем
+								.doverie-block-main-right-item__text У нас работают только ключевые сотрудники. Чтобы офисные расходы не «проедали» бюджет на инфраструктуру посёлков.
+							.doverie-block-main-right-item
+								.doverie-block-main-right-item__title Все участки в собственности
+								.doverie-block-main-right-item__text Вы покупаете участок без посредников. И сразу же оформляете его в собственность. Все документы в наличии.
+							.doverie-block-main-right-item
+								.doverie-block-main-right-item__title Опыт работы 5 лет
+								.doverie-block-main-right-item__text Опыт каждого сотрудника от 5 лет. Лично я, будучи наёмным работником, сдал 4 посёлка.
+		include ../common/consult.pug
+	.text
+		.container
+			.text-title Заголовок для сео блока
+			.text-main 
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi expedita molestias optio nisi eum. Accusantium, quasi hic dicta ipsa impedit cum exercitationem voluptatibus laudantium provident, quisquam quae magnam dolor.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi expedita molestias optio nisi eum. Accusantium, quasi hic dicta ipsa impedit cum exercitationem voluptatibus laudantium provident, quisquam quae magnam dolor.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi expedita molestias optio nisi eum. Accusantium, quasi hic dicta ipsa impedit cum exercitationem voluptatibus laudantium provident, quisquam quae magnam dolor.
