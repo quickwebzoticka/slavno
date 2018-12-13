@@ -8,7 +8,6 @@
 	}
 	&-block{
 		width: 100%;
-		height: 445px;
 		display: flex;
 		justify-content: space-between;
 		&-left{
@@ -63,6 +62,16 @@
 							color: #c9c9c9;
 						}
 					}
+					@include w1366{
+						& label{
+							font-size: 12.6;
+						}
+						& input{
+							width: 210px;
+							margin-right: 35px;
+							padding: 10px 15px;
+						}
+					}
 				}
 				&-btn{
 					width: 250px;
@@ -98,6 +107,15 @@
 						z-index: 2;
 						cursor: pointer;
 					}
+					@include w1366{
+						&__link{
+							height: 45px;
+							padding: 16px 0;
+						}
+						&:before{
+							height: 45px;
+						}
+					}
 					&:hover &__link{
 						border-bottom: 1px solid #6a8e41;
 						background: linear-gradient(#b1d588, #7f9f5a);
@@ -113,6 +131,11 @@
 						left: -1px;
 					}
 				}
+				@include w1366{
+					&-btn{
+						width: 225px;
+					}
+				}
 			}
 			&__privacy{
 				max-width: 420px;
@@ -120,10 +143,43 @@
 				font-family: 'Noto Sans', serif;
 				font-size: 11px;
 				margin-top: 15px;
+				& a{
+					color: #b4c3a8;
+					text-decoration: underline;
+				}
+			}
+			@include w1366{
+				&__title{
+					font-size: 28px;
+					line-height: 38px;
+				}
+				&__text{
+					font-size: 18px;
+				}
+				&__privacy{
+					font-size: 10px;
+				}
+			}
+		}
+		@include w1366{
+			&-left{
+				padding-left: 70px;
+				padding-top: 50px;
 			}
 		}
 		&-right{
 			display: flex;
+			align-items: flex-end;
+			@include w1366{
+				& img{
+					width: 425px;
+				}
+			}
 		}
+	}
+}
+@include w1366{
+	.consult{
+		margin-top: 150px;
 	}
 }

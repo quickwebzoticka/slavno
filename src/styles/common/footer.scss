@@ -56,6 +56,11 @@
 					margin-bottom: 13px;
 				}
 			}
+			@include w1366{
+				&-list{
+					margin-right: 100px;
+				}
+			}
 		}
 		&-contacts{
 			display: flex;
@@ -72,6 +77,14 @@
 					font-family: 'Noto Sans', sans-serif;
 					font-size: 11px;
 					color: #828586;
+				}
+				@include w1366{
+					&-top__phone{
+						font-size: 21px;
+					}
+					&__bot{
+						font-size: 10px;
+					}
 				}
 			}
 			&-but{
@@ -134,8 +147,18 @@
 				}
 				&__bot{
 					margin-top: 5px;
+					font-family: 'Noto Sans', sans-serif;
 					display: inline-block;
 					color: #828586;
+					font-size: 11px;
+				}
+				@include w1366{
+					&-top__mail{
+						font-size: 15px;
+					}
+					&__bot{
+						font-size: 10px;
+					}
 				}
 			}
 			&-social{
@@ -152,6 +175,22 @@
 					display: inline-block;
 					color: #828586;
 				}
+				@include w1366{
+					&__bot{
+						font-size: 10px;
+					}
+				}
+			}
+			@include w1366{
+				&-but{
+					width: 195px;
+				}
+			}
+		}
+		@include w1366{
+			&-info{
+				width: 319px;
+				font-size: 11.7px;
 			}
 		}
 	}
