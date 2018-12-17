@@ -1174,7 +1174,6 @@
 			}
 			&-item{
 				flex-direction: row;
-				margin-left: 20px;
 				margin-top: 20px;
 				&-right{
 					margin-left: 20px;
@@ -1207,7 +1206,7 @@
 	.actions{
 		padding-top: 20px;
 		&-block{
-			justify-content: flex-start;
+			justify-content: center;
 			&-more{
 				font-size: 12px;
 			}
@@ -1545,6 +1544,7 @@
 		&-block-main{
 			margin-top: 30px;
 			flex-direction: column;
+			align-items: center;
 		}
 	}
 }
@@ -2432,7 +2432,17 @@
 			&-main{
 				margin-top: 20px;
 				&__img{
-					top: 195px;
+					top: 145px;
+				}
+				@media screen and (max-width: 424px){
+					&__img{
+						top: 175px;
+					}
+				}
+				@media screen and (max-width: 374px){
+					&__img{
+						top: 195px;
+					}
 				}
 			}
 		}
