@@ -8,22 +8,112 @@ $(document).ready(function(){
 		$(document).find('body').attr('style','');
 	});
 
+	$('.footer-block-menus-list__title').click(function(e) {
+		if (screen.width <= 767) {
+			e.preventDefault();
+			$(this).toggleClass('in').next().slideToggle();
+		}
+	});
+	if (screen.width <= 767) {
+		$(document).find('.footer-block-menus-list__title').next().slideUp();
+		$(document).find('.footer-block-menus-list__title').addClass('in');
+	}
+	if (screen.width > 767) {
+		$(document).find('.footer-block-menus-list__title').next().slideDown();
+		$(document).find('.footer-block-menus-list__title').removeClass('in');
+	}
+	
+	resizewindow();
+	$(window).resize(function(e){
+		resizewindow();
+		if (screen.width <= 767) {
+			$(document).find('.footer-block-menus-list__title').next().slideUp();
+			$(document).find('.footer-block-menus-list__title').addClass('in');
+		}
+		if (screen.width > 767) {
+			$(document).find('.footer-block-menus-list__title').next().slideDown();
+			$(document).find('.footer-block-menus-list__title').removeClass('in');
+		}
+	});
+
+	$(".consult-block-left-main-form__tel").inputmask({
+		mask : "+7 999 999 99 99",
+		showMaskOnHover: false,
+		showMaskOnFocus: true
+	});
+
 	var slider = $('.slider-block-inn').slick({
 		arrows:false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		infinite: false,
-		draggable: false
+		draggable: false,
+		swipe: false,
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 2.5
+				}
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1.5
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 	$(document).on('click', '.slider-block-prev', function (e) {
 		slider.slick('slickPrev');
-		e.preventDefault();
 		watchSlider();
 	});
 	$(document).on('click', '.slider-block-next', function (e) {
 		slider.slick('slickNext');
-		e.preventDefault();
 		watchSlider();
+	});
+
+	var sliderUchastki = $('.uchastki-block-inn').slick({
+		arrows:false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1366,
+				settings: {
+					slidesToShow: 3.5,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2.5,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1.5,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					dots: true
+				}
+			}
+		]
 	});
 	watchSlider();
 
@@ -40,7 +130,8 @@ $(document).ready(function(){
 	});
 
 	$(document).find('.filter-block-right-comm__select').SumoSelect({
-		placeholder: 'Выберите из списка'
+		placeholder: 'Выберите из списка',
+		forceCustomRendering: true
 	});
 
 	var x = document.getElementsByName("input-vol");
@@ -58,7 +149,6 @@ $(document).ready(function(){
 					}
 			}
 	}
-
 });
 
 function watchSlider(){
@@ -116,4 +206,72 @@ function getChar(event) {
     }
 
     return null; // специальная клавиша
+}
+
+function resizewindow() {
+	if (screen.width >= 1920) {
+		$(document).find('.filter-title-br').attr('style', '');
+		$(document).find('.consult-block-right__img').attr('src', 'assets/images/consult-tanya.jpg');
+		let numBr = $(document).find('.del');
+		for(i = 0; i < numBr.length; i++){
+			numBr.eq(i).attr('style', '');
+		}
+		let numBanBr = $(document).find('.banner-br-del');
+		for(i = 0; i < numBanBr.length; i++){
+			numBanBr.eq(i).attr('style', '');
+		}
+	}
+	
+	if (screen.width < 1919 && screen.width >= 1024) {
+		$(document).find('.filter-title-br').attr('style', 'display: none');
+		$(document).find('.consult-block-right__img').attr('src', 'assets/images/consult-tanya.png');
+		let numBr = $(document).find('.del');
+		for(i = 0; i < numBr.length; i++){
+			numBr.eq(i).attr('style', '');
+		}
+		let numBanBr = $(document).find('.banner-br-del');
+		for(i = 0; i < numBanBr.length; i++){
+			numBanBr.eq(i).attr('style', '');
+		}
+	}
+
+	if (screen.width < 1023 && screen.width >= 768) {
+		$(document).find('.filter-title-br').attr('style', 'display: none');
+		let numBr = $(document).find('.del');
+		for(i = 0; i < numBr.length; i++){
+			numBr.eq(i).attr('style', 'display: none');
+		}
+		let numBanBr = $(document).find('.banner-br-del');
+		for(i = 0; i < numBanBr.length; i++){
+			numBanBr.eq(i).attr('style', '');
+		}
+		$(document).find('.consult-block-right__img').attr('src', 'assets/images/consult-tanya768.png');	
+	}
+
+	if (screen.width < 767 && screen.width >= 480) {
+		$(document).find('.filter-title-br').attr('style', 'display: none');
+		$(document).find('.header-logo__img').attr('src', 'assets/images/logo-mobile.png');	
+		let numBr = $(document).find('.del');
+		for(i = 0; i < numBr.length; i++){
+			numBr.eq(i).attr('style', 'display: none');
+		}
+		let numBanBr = $(document).find('.banner-br-del');
+		for(i = 0; i < numBanBr.length; i++){
+			numBanBr.eq(i).attr('style', '');
+		}
+	}
+
+	if (screen.width < 479) {
+		$(document).find('.filter-title-br').attr('style', 'display: none');
+		$(document).find('.header-logo__img').attr('src', 'assets/images/logo-mobile.png');	
+		let numBr = $(document).find('.del');
+		for(i = 0; i < numBr.length; i++){
+			numBr.eq(i).attr('style', 'display: none');
+		}
+		let numBanBr = $(document).find('.banner-br-del');
+		for(i = 0; i < numBanBr.length; i++){
+			numBanBr.eq(i).attr('style', 'display: none');
+		}
+	}
+	
 }

@@ -12,7 +12,7 @@
 			line-height: 21px;
 			color: #737373;
 			margin-top: -15px;
-			&__text{
+			&__text, &__text2{
 				margin-top: 20px;
 				& a{
 					color: #8fa17a;
@@ -20,7 +20,7 @@
 					cursor: pointer;
 				}
 			}
-			&__pairText{
+			&__pairText, &__pairText2{
 				display: flex;
 				align-items: center;
 				margin-top: 25px;
@@ -32,10 +32,49 @@
 					margin-left: 5px;
 				}
 			}
+			@include w1024{
+				&-logo__img{
+					width: 157px;
+				}
+				&__text, &__text2{
+					margin-top: 0;
+				}
+				&__text2{
+					text-align: right;
+				}
+				&-wrap-width{
+					width: 390px;
+				}
+				&__pairText{
+					margin-top: 15px;
+				}
+				&__pairText2{
+					justify-content: flex-end;
+					margin-top: 7px;
+				}
+			}
+			@include w768{
+				&__pairText, &__pairText2{
+					white-space: nowrap;
+				}
+				&__text, &__text2{
+					line-height: 19px;
+				}
+				&-wrap-width{
+					width: 250px;
+				}
+			}
+			@include w480{
+				&__pairText{
+					margin-top: 5px;
+				}
+				&__text2{
+					text-align: left;
+				}
+			}
 		}
 		&-menus{
 			display: flex;
-			align-self: flex-end;
 			&-list{
 				display: flex;
 				flex-direction: column;
@@ -55,10 +94,60 @@
 					font-size: 14px;
 					margin-bottom: 13px;
 				}
+				&-wrap{
+					display: flex;
+					flex-direction: column;
+				}
+				@include w1024{
+					&__title{
+						font-size: 14.4px;
+					}
+					&__item{
+						font-size: 12.6px;
+					}
+				}
+				@include w480{
+					&__title.in{
+						color: #824c3d;
+						margin-bottom: 10px;
+					}
+					&__title{
+						margin-bottom: 20px;
+						margin-top: 10px;
+						position: relative;
+					}
+					&__title:before{
+						content: '';
+						background: url('../images/minus.png') center center no-repeat;
+						width: 16px;
+						height: 16px;
+						position: absolute;
+						right: 30px;
+						top: 0;
+					}
+					&__title.in:before{
+						background: url('../images/plus.png') center center no-repeat;
+					}
+				}
 			}
 			@include w1366{
 				&-list{
 					margin-right: 100px;
+				}
+			}
+			@include w1024{
+				&-list{
+					margin-right: 120px;
+				}
+			}
+			@include w480{
+				&-list{
+					margin-right: 0;
+					border-bottom: 1px solid #e5e5e5;
+    			width: 110%;
+    			margin-left: -22px;
+					padding-left: 22px;
+					white-space: nowrap;
 				}
 			}
 		}
@@ -91,6 +180,7 @@
 				width: 215px;
 				margin-top: 20px;
 				position: relative;
+				cursor: pointer;
 				&__link{
 					padding: 16px 0;
 					display: block;
@@ -124,6 +214,16 @@
 					height: 100%;
 					top: -1px;
 					left: 0;
+				}
+				@include w1024{
+					&__link{
+						font-size: 10px;
+    				height: 40px;
+    				padding: 14px 0;
+					}
+					&:before{
+						height: 40px;
+					}
 				}
 				&:hover &__link{
 					border-bottom: 1px solid #7d4e41;
@@ -180,10 +280,41 @@
 						font-size: 10px;
 					}
 				}
+				@include w768{
+					&__bot{
+						display: none;
+					}
+				}
 			}
 			@include w1366{
 				&-but{
 					width: 195px;
+				}
+			}
+			@include w1024{
+				&-but{
+					width: 180px;
+				}
+				&-mail, &-social{
+					margin-top: 20px;
+				}
+			}
+			@include w768{
+				&-but{
+					order: -1;
+				}
+				&-but, &-mail, &-social{
+					margin-top: 0;
+				}
+			}
+			@include w480{
+				&-tel{
+					width: 183px;
+					text-align: left;
+				}
+				&-mail{
+					order: 1;
+					margin-top: 30px;
 				}
 			}
 		}
@@ -193,5 +324,103 @@
 				font-size: 11.7px;
 			}
 		}
+		@include w1024{
+			&-info{
+				order: 1;
+				flex: 1;
+				display: flex;
+				justify-content: space-between;
+    		width: auto;
+    		max-width: none;
+    		margin-top: 40px;
+			}
+		}
+		@include w768{
+			&-menus{
+				justify-content: space-between;
+			}
+			&-contacts{
+				flex-direction: row-reverse;
+				justify-content: space-between;
+				margin-top: 25px;
+			}
+		}
+		@include w480{
+			&-info{
+				flex-wrap: wrap;
+				&-wrap{
+					display: flex;
+					flex: 1;
+					justify-content: space-between;
+					margin-top: 20px;
+				}
+				&-wrap-width{
+					width: 265px;
+				}
+				&__pairText__pair, &__pairText2__pair{
+					margin-right: 10px;
+				}
+			}
+			&-menus{
+				flex-direction: column;
+				margin-left: 10px;
+			}
+			&-contacts{
+				flex-wrap: wrap;
+			}
+		}
+		@include w320{
+			&-info{
+				margin-top: 20px;
+				&-wrap{
+					flex-direction: column;
+					margin-top: 15px;
+				}
+				&-wrap-width{
+					margin-top: 10px;
+				}
+				&__pairText2{
+					justify-content: flex-start;
+					margin-top: 15px;
+				}
+			}
+			&-contacts{
+				flex-direction: column;
+				align-items: flex-start;
+				padding-left: 10px;
+				&-but, &-mail, &-social{
+					margin-top: 15px;
+				}
+				&-but{
+					order: 0;
+				}
+				&-mail{
+					order: 0;
+				}
+			}
+		}
+	}
+	@include w1024{
+		&-block{
+			flex-wrap: wrap;
+			padding-top: 30px;
+		}
+	}
+	@include w768{
+		&-block{
+			flex-wrap: wrap;
+			padding-top: 30px;
+			flex-direction: column;
+		}
+	}
+	@include w480{
+		&-block{
+			padding-top: 10px;
+		}
+	}
+}
+@include w1024{
+	.footer{
+		margin-bottom: 35px;
 	}
 }

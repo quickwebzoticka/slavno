@@ -10,10 +10,10 @@
 							form.consult-block-left-main-form(action="")
 								.consult-block-left-main-form-pair
 									label(for="name") Как вас зовут
-									input(type="text", name="name", id="name", placeholder="Андрей")
+									input.consult-block-left-main-form__name(type="text", name="name", id="name", placeholder="Андрей", onfocus="this.placeholder = ''", onblur="this.placeholder = 'Андрей'")
 								.consult-block-left-main-form-pair
 									label(for="tel") Телефон
-									input(type="tel", name="tel", id="tel", placeholder="+7 812 999 23 44")
+									input.consult-block-left-main-form__tel(type="tel", name="tel", id="tel", placeholder="+7 812 999 23 44", onfocus="this.placeholder = ''", onblur="this.placeholder = '+7 812 999 23 44'")
 							.consult-block-left-main-btn 
 								a.consult-block-left-main-btn__link(href="#") Заказать звонок
 						.consult-block-left__privacy Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с политикой конциденциальности

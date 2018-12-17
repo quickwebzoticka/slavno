@@ -12,6 +12,32 @@
 		&__img{
 			margin-top: -20px;
 		}
+		@include w1024{
+			&__img{
+				width: 175px;
+			}
+		}
+		@include w768{
+			&__img{
+				margin-top: -30px;
+			}
+		}
+		@include w480{
+			&__img{
+				width: 50px;
+				margin-top: -20px;
+			}
+		}
+	}
+	@include w1024{
+		&-logo{
+			margin-right: 30px;
+		}
+	}
+	@include w480{
+		&-logo{
+			margin-right: 20px;
+		}
 	}
 	&-menu{
 		font-size: 15px;
@@ -22,12 +48,13 @@
 			color: #5f852c;
 			padding-bottom: 7px;
     	border-bottom: 1px solid #b5e0c3;
-    	margin-bottom: 25px;
-    	display: inline;
+    	margin-bottom: 10px;
+    	display: inline-block;
 		}
 		@include w1366{
 			&__item{
-
+				margin-bottom: 25px;
+				margin-right: 0;
 			}
 		}
 	}
@@ -74,6 +101,20 @@
 				font-size: 16px;
 				color: #9c685b;
 			}
+			@include w1024{
+				&__text{
+					margin-left: 10px;
+				}
+			}
+			@include w768{
+				& img{
+					height: 15px;
+    			width: 20px;
+				}
+				&__text{
+					display: none;
+				}
+			}
 		}
 		&__bot{
 			color: #828586;
@@ -81,6 +122,20 @@
 			font-size: 10px;
 			margin-left: 30px;
 			white-space: nowrap;
+		}
+		@include w1024{
+			&-top{
+				font-size: 15px;
+			}
+			&__bot{
+				font-size: 9px;
+				margin-left: 24px;
+			}
+		}
+		@include w768{
+			&__bot{
+				display: none;
+			}
 		}
 	}
 	@include w1366{
@@ -116,6 +171,36 @@
 					right: 28px;
 				}
 			}
+			@include w1024{
+				& img{
+					width: 14px;
+				}
+				&__text{
+					margin-left: 10px;
+					font-size: 15px;
+				}
+				&__count{
+					font-size: 9px;
+					right: 23px;
+				}
+			}
+			@include w768{
+				&__count{
+					right: -13px;
+				}
+			}
+			@include w480{
+				&__text{
+					display: none;
+				}
+				& img{
+					width: 17px;
+				}
+				&__count{
+					right: -13px;
+					top: -3px;
+				}
+			}
 		}
 		&__bot{
 			color: #828586;
@@ -129,6 +214,20 @@
 				font-size: 10px;
 			}
 		}
+		@include w1024{
+			&__bot{
+				font-size: 9px;
+				margin-left: 24px;
+			}
+		}
+		@include w768{
+			&-top{
+				white-space: nowrap;
+			}
+			&__bot{
+				display: none;
+			}
+		}
 	}
 	
 	&-tel{
@@ -138,10 +237,26 @@
 			font-family: 'Noto Serif', serif;
 			font-size: 24px;
 			margin-left: 10px;
+			white-space: nowrap;
 		}
 		@include w1366{
 			&-top__phone{
 				font-size: 21px;
+			}
+		}
+		@include w1024{
+			&-top__phone{
+				font-size: 19px;
+			}
+		}
+		@include w768{
+			&-top__phone{
+				font-size: 16px;
+			}
+		}
+		@include w480{
+			&-top__img{
+				display: none;
 			}
 		}
 		&__bot{
@@ -156,10 +271,33 @@
 				font-size: 10px;
 			}
 		}
+		@include w1024{
+			&__bot{
+				font-size: 9px;
+			}
+		}
+		@include w768{
+			&__bot{
+				display: none;
+			}
+			&-top{
+				white-space: nowrap;
+			}
+		}
 	}
 	@include w1366{
 		&-tel{
 			margin-top: -5px;
+		}
+	}
+	@include w1024{
+		&-tel{
+			margin-top: -4px;
+		}
+	}
+	@include w768{
+		&-tel{
+			margin-top: 0;
 		}
 	}
 	&-but{
@@ -193,10 +331,34 @@
 				left: -1px;
 				border-radius: 30px;
 			}
+			@include w1024{
+				&:before{
+					height: 40px;
+				}
+			}
+			@include w320{
+				&:before{
+					height: 25px;
+				}
+			}
 		}
 		@include w1366{
 			&__link{
 				padding: 18px 0;
+			}
+		}
+		@include w1024{
+			&__link{
+				padding: 14px 0;
+				font-size: 10px;
+				height: 40px;
+				border-bottom: 2px solid #7d4e41;
+			}
+		}
+		@include w320{
+			&__link{
+				padding: 7px 0;
+    		height: 26px;
 			}
 		}
 		&:active &__link:before{
@@ -218,5 +380,29 @@
 		&-but{
 			width: 200px;
 		}
+	}
+	@include w1024{
+		&-but{
+			width: 175px;
+		}
+	}
+	@include w480{
+		&-but{
+			width: 145px;
+		}
+	}
+	@include w320{
+		&-tel{
+			display: none;
+		}
+		&-but{
+			width: 140px;
+			margin-top: -6px;
+		}
+	}
+}
+@include w480{
+	.header{
+		padding: 30px 0;
 	}
 }
