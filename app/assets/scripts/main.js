@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	let sliderItems = $(document).find('.slider-block-item');
+	let sliderPrev = $(document).find('.slider-block-prev__img');
+	let sliderNext = $(document).find('.slider-block-next__img');
+
 	$(document).on('click', '.header-menuMob', function(){
 		$(document).find('.header-menuActive-wrap').addClass('active');
 		$(document).find('body').attr('style','position: fixed');
@@ -8,7 +12,7 @@ $(document).ready(function(){
 		$(document).find('body').attr('style','');
 	});
 
-	var slider = $('.slider-block-inn').slick({
+	var slider = $('.slider .slider-block-inn').slick({
 		arrows:false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -18,14 +22,14 @@ $(document).ready(function(){
 	$(document).on('click', '.slider-block-prev', function (e) {
 		slider.slick('slickPrev');
 		e.preventDefault();
-		watchSlider();
+		watchSlider(sliderItems, sliderPrev, sliderNext);
 	});
 	$(document).on('click', '.slider-block-next', function (e) {
 		slider.slick('slickNext');
 		e.preventDefault();
-		watchSlider();
+		watchSlider(sliderItems, sliderPrev, sliderNext);
 	});
-	watchSlider();
+	watchSlider(sliderItems, sliderPrev, sliderNext);
 
 	changedRangeInput($(document).find('#rangeInputFirstPrice'));
 	changedRangeInput($(document).find('#rangeInputSecondPrice'));
@@ -61,10 +65,7 @@ $(document).ready(function(){
 
 });
 
-function watchSlider(){
-	let sliderItems = $(document).find('.slider-block-item');
-	let sliderPrev = $(document).find('.slider-block-prev__img');
-	let sliderNext = $(document).find('.slider-block-next__img');
+function watchSlider(sliderItems, sliderPrev, sliderNext){
 	if( sliderItems[0].classList.contains("slick-active") ){
 		sliderPrev.attr("src", "assets/images/arrow-prev-disabled.png");
 		sliderPrev.attr("style", "cursor: auto");
