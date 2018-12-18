@@ -1,0 +1,72 @@
+extends ../template
+
+block variables
+	- var title = 'Новости и Акции'
+
+block content
+	.bg
+		.news
+			.container
+				.news-block
+					.news-block-top
+						h1.news-block-top__title Новости и Акции
+						.news-block-top-tabs
+							span Показать на странице:
+							a.news-block-top-tabs-item.active(href="#") Все
+							a.news-block-top-tabs-item(href="#") Новости
+							a.news-block-top-tabs-item(href="#") Акции
+					.news-block-main
+						.news-block-main-item
+							.news-block-main-item-inn
+								img.news-block-main-item-inn__img(src="assets/images/news-item.png", alt="Новость")
+								.news-block-main-item-inn-info
+									span.news-block-main-item-inn-info__date 2 ноября 2018
+									span.news-block-main-item-inn-info__type Новость
+								.news-block-main-item-inn__title <a href="#">В поселке «Изумрудный Город» сдана в эксплуатацию газовая сеть</a>
+								.news-block-main-item-inn__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quidem officiis pariatur ipsam non quam soluta veniam quos repellendus consectetur.
+						.news-block-main-item
+							.news-block-main-item-inn
+								img.news-block-main-item-inn__img(src="assets/images/news-item.png", alt="Новость")
+								.news-block-main-item-inn-info
+									span.news-block-main-item-inn-info__date 2 ноября 2018
+									span.news-block-main-item-inn-info__type Новость
+								.news-block-main-item-inn__title <a href="#">В поселке «Изумрудный Город» сдана в эксплуатацию газовая сеть</a>
+								.news-block-main-item-inn__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quidem officiis pariatur ipsam non quam soluta veniam quos repellendus consectetur.
+						.news-block-main-item
+							.news-block-main-item-inn
+								img.news-block-main-item-inn__img(src="assets/images/news-item.png", alt="Новость")
+								.news-block-main-item-inn-info
+									span.news-block-main-item-inn-info__date 2 ноября 2018
+									span.news-block-main-item-inn-info__type Новость
+								.news-block-main-item-inn__title <a href="#">В поселке «Изумрудный Город» сдана в эксплуатацию газовая сеть</a>
+								.news-block-main-item-inn__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quidem officiis pariatur ipsam non quam soluta veniam quos repellendus consectetur.
+						.news-block-main-item
+							.news-block-main-item-inn
+								img.news-block-main-item-inn__img(src="assets/images/news-item.png", alt="Новость")
+								.news-block-main-item-inn-info
+									span.news-block-main-item-inn-info__date 2 ноября 2018
+									span.news-block-main-item-inn-info__type Новость
+								.news-block-main-item-inn__title <a href="#">В поселке «Изумрудный Город» сдана в эксплуатацию газовая сеть</a>
+								.news-block-main-item-inn__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quidem officiis pariatur ipsam non quam soluta veniam quos repellendus consectetur.
+						.news-block-main-item
+							.news-block-main-item-inn
+								img.news-block-main-item-inn__img(src="assets/images/news-item.png", alt="Новость")
+								.news-block-main-item-inn-info
+									span.news-block-main-item-inn-info__date 2 ноября 2018
+									span.news-block-main-item-inn-info__type Новость
+								.news-block-main-item-inn__title <a href="#">В поселке «Изумрудный Город» сдана в эксплуатацию газовая сеть</a>
+								.news-block-main-item-inn__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quidem officiis pariatur ipsam non quam soluta veniam quos repellendus consectetur.
+						.news-block-main-item
+							.news-block-main-item-inn
+								img.news-block-main-item-inn__img(src="assets/images/news-item.png", alt="Новость")
+								.news-block-main-item-inn-info
+									span.news-block-main-item-inn-info__date 2 ноября 2018
+									span.news-block-main-item-inn-info__type Новость
+								.news-block-main-item-inn__title <a href="#">В поселке «Изумрудный Город» сдана в эксплуатацию газовая сеть</a>
+								.news-block-main-item-inn__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quidem officiis pariatur ipsam non quam soluta veniam quos repellendus consectetur.
+					.news-block-bot
+						img.news-block-bot__prev(src="assets/images/pagin-arr-dis.png", alt="Назад")
+						span.news-block-bot__page.active 11
+						span.news-block-bot__page 29
+						img.news-block-bot__next(src="assets/images/pagin-arr.png", alt="Вперед")
+		include ../common/consult.pug

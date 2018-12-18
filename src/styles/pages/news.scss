@@ -1,0 +1,266 @@
+.news{
+	padding-top: 220px;
+	margin-bottom: 90px;
+	&-block{
+		&-top{
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			font-family: 'Noto Serif', serif;
+			margin-bottom: 40px;
+			padding-right: 40px;
+			&__title{
+				margin: 0;
+				font-size: 32px;
+				font-weight: bold;
+			}
+			&-tabs{
+				& span{
+					color: #a5a4a4;
+				}
+				font-style: italic;
+				font-size: 18px;
+				&-item{
+					margin-left: 20px;
+					color: #824c3d;
+				}
+				&-item.active{
+					color: #000;
+				}
+			}
+		}
+		&-main{
+			display: flex;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			&-item{
+				width: 330px;
+				height: 390px;
+				padding: 5px;
+				margin: 0 40px 45px 0;
+				border: 1px solid #f1f1f1;
+				border-radius: 10px;
+				box-shadow: 0px 15px 40px -15px rgba(0,0,0,.15);
+				&-inn{
+					width: 100%;
+					height: 100%;
+					border: 1px solid #e5e5e5;
+					border-radius: 10px;
+					overflow: hidden;
+					&__img{
+						width: 100%;
+						margin-bottom: 10px;
+					}
+					&-info, &__title, &__text{
+						margin: 0 15px;
+					}
+					&-info{
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						font-size: 12px;
+						margin-bottom: 10px;
+						&__date{
+							font-family: 'Noto Sans', serif;
+							color: #c1c1c1;
+						}
+						&__type{
+							font-family: 'Noto Serif', serif;
+							font-style: italic;
+							color: #fff;
+							padding: 5px 10px;
+							background-color: #c75c43;
+							border-radius: 10px;
+						}
+					}
+					&__title{
+						font-family: 'Noto Serif', serif;
+						font-style: italic;
+						font-weight: bold;
+						font-size: 17px;
+						line-height: 25px;
+						color: #76974e;
+						margin-bottom: 15px;
+						& a{
+							border-bottom: 1px solid #bdbdbd;
+						}
+					}
+					&__text{
+						color: #8b8b8b;
+						font-family: 'Noto Sans', serif;
+						font-size: 14px;
+						line-height: 19px;
+					}
+				}
+			}
+		}
+		&-bot{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-right: 40px;
+			&__prev{
+				margin-right: 15px;
+				cursor: pointer;
+			}
+			&__next{
+				margin-left: 15px;
+				cursor: pointer;
+			}
+			&__page{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 36px;
+    		height: 35px;
+				font-family: 'Noto Sans', serif;
+				color: #94867d;
+				font-size: 11.5px;
+				margin: 0 5px;
+				border-radius: 50%;
+				background-color: #fff;
+				cursor: pointer;
+				box-shadow: 0px 5px 18px -5px rgba(0,0,0,0.2);
+			}
+			&__page.active{
+				background-color: #e6e6e6;
+				color: #aaaaaa;
+			}
+		}
+	}
+}
+@include w1366{
+	.news{
+		padding-top: 205px;
+		margin-bottom: 50px;
+		&-block{
+			padding-left: 100px;
+			padding-right: 80px;
+			&-top{
+				padding-right: 30px;
+				margin-bottom: 30px;
+			}
+			&-main-item{
+				width: 345px;
+				margin: 0 20px 45px 0;
+			}
+			&-bot{
+				padding-right: 20px;
+			}
+		}
+	}
+}
+@include w1024{
+	.news{
+		padding-top: 170px;
+		&-block{
+			padding-left: 0;
+			padding-right: 0;
+			&-top{
+				padding-right: 20px;
+			}
+			&-main-item{
+				width: 298px;
+				height: 360px;
+				&-inn__title{
+					font-size: 15px;
+					line-height: 22px;
+				}
+				&-inn__text{
+					font-size: 12.6px;
+					line-height: 17px;
+				}
+			}
+		}
+	}
+}
+@include w768{
+	.news{
+		&-block{
+			&-top{
+				&__title{
+					font-size: 28px;
+					line-height: 28px;
+				}
+				&-tabs{
+					font-size: 16px;
+					&-item{
+						margin-left: 15px;
+					}
+				}
+			}
+			&-main-item{
+				width: 336px;
+				height: 390px;
+				&-inn__title{
+					font-size: 17px;
+					line-height: 25px;
+				}
+				&-inn__text{
+					font-size: 14px;
+					line-height: 19px;
+				}
+			}
+			&-bot{
+				padding-right: 0;
+			}
+		}
+	}
+}
+@include w480{
+	.news{
+		padding-top: 110px;
+		margin-bottom: 20px;
+		&-block{
+			&-top{
+				flex-direction: column;
+				align-items: flex-start;
+				&__title{
+					font-size: 24px;
+					margin-bottom: 15px;
+				}
+			}
+			&-main-item{
+				width: 100%;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+@include w320{
+	.news{
+		padding-top: 105px;
+		&-block{
+			&-top{
+				margin-bottom: 20px;
+				&__title{
+					margin-bottom: 20px;
+				}
+				&-tabs{
+					&  span{
+						display: block;
+						margin-bottom: 10px;
+					}
+					&-item{
+						margin-left: 0;
+						margin-right: 20px;
+					}
+				}
+			}
+			&-main-item{
+				height: 360px;
+				&-inn__title{
+					font-size: 15px;
+					line-height: 22px
+				}
+				&-inn__text{
+					font-size: 12.6px;
+					line-height: 17px;
+				}
+			}
+			&-bot{
+			}
+		}
+	}
+}

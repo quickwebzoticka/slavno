@@ -1,22 +1,22 @@
 .header-menuActive-wrap
 	img.header-menuClose__img(src="assets/images/close.png", alt="Закрыть")
 	nav.header-menuActive
-		a.header-menu__item(href="#") Главная
+		a.header-menu__item(href="index.html") Главная
 		a.header-menu__item(href="#") Иннола Парк
 		a.header-menu__item(href="#") Изумрудный Город
-		a.header-menu__item(href="#") Новости и Акции
-		a.header-menu__item(href="#") Контакты
+		a.header-menu__item(href="news.html") Новости и Акции
+		a.header-menu__item(href="contacts.html") Контакты
 .header
 	.containerWide
 		.header-block
 			.header-logo
 				img.header-logo__img(src="assets/images/logo.png", alt="Логотип")
 			nav.header-menu.active
-				a.header-menu__item(href="#") Главная
+				a.header-menu__item(href="index.html") Главная
 				a.header-menu__item(href="#") Иннола Парк
 				a.header-menu__item(href="#") Изумрудный Город
-				a.header-menu__item(href="#") Новости и Акции
-				a.header-menu__item(href="#") Контакты
+				a.header-menu__item(href="news.html") Новости и Акции
+				a.header-menu__item(href="contacts.html") Контакты
 			.header-menuMob
 				.header-menuMob-top
 					img.header-menuMob-top__img(src="assets/images/menu.png", alt="Меню")
@@ -35,3 +35,6 @@
 				span.header-tel__bot По всем интересующим вопросам
 			.header-but
 				a.header-but__link(href="#") Закажите звонок
+	.container
+		if title!='Главная'
+			include breadcrumbs.pug

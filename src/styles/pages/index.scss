@@ -2138,6 +2138,7 @@
 }
 
 .doverie{
+	margin-bottom: 180px;
 	margin-top: 190px;
 	&-block{
 		&__title{
@@ -2450,22 +2451,29 @@
 }
 @include w1366{
 	.doverie{
+		margin-bottom: 150px;
 		margin-top: 150px;
 	}
 }
 @include w1024{
 	.doverie{
+		margin-bottom: 85px;
 		margin-top: 130px;
 	}
 }
 @include w768{
 	.doverie{
+		margin-bottom: 55px;
 		margin-top: 50px;
+	}
+}
+@include w320{
+	.doverie{
+		margin-bottom: 25px;
 	}
 }
 
 .text{
-	margin-top: 100px;
 	margin-bottom: 90px;
 	&-title{
 		font-size: 32px;
@@ -2535,24 +2543,13 @@
 		margin-bottom: 70px;
 	}
 }
-@include w1024{
-	.text{
-		margin-top: 70px;
-	}
-}
 @include w768{
 	.text{
-		margin-top: 60px;
 		margin-bottom: 60px;
 	}
 }
 @include w480{
 	.text{
 		margin-bottom: 0px;
-	}
-}
-@include w320{
-	.text{
-		margin-top: 40px;
 	}
 }

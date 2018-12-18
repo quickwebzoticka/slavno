@@ -1,0 +1,36 @@
+extends ../template
+
+block variables
+	- var title = 'Контакты'
+
+block content
+	.bg
+		.contacts
+			.containerWide
+				.contacts-wrap
+					.container
+						.contacts-block
+							h1.contacts-block__title Контакты
+							.contacts-block-main
+								.contacts-block-main__map#YMapsID(style="width: 100%; height: 100%;")
+								.contacts-block-main-info
+									.contacts-block-main-info-item
+										.contacts-block-main-info-item__title Адрес
+										.contacts-block-main-info-item__text Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок 
+									.contacts-block-main-info-item
+										.contacts-block-main-info-item__title Время работы
+										.contacts-block-main-info-item__boldtext 11:00 – 18:30
+										.contacts-block-main-info-item__text кроме воскресенья и понедельника
+									.contacts-block-main-info-item
+										.contacts-block-main-info-item__title Телефон
+										.contacts-block-main-info-item__boldtext 8 812 509 66 07
+										.contacts-block-main-info-item__text звоните по всем вопросам
+									.contacts-block-main-info-item
+										.contacts-block-main-info-item__title E-mail
+										.contacts-block-main-info-item__bolditalictext info@slavno.pro
+									.contacts-block-main-info-item
+										.contacts-block-main-info-item__title Адрес
+										.contacts-block-main-info-item__text Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок 
+
+
+		include ../common/consult.pug

@@ -1,4 +1,20 @@
 $(document).ready(function(){
+
+	if($(document).find('#YMapsID').length != 0){
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map("YMapsID", {
+				center: [59.785032, 29.952116],
+				zoom: 11,
+			});
+			myMap.behaviors.disable('scrollZoom');
+			var myPlacemark = new ymaps.Placemark([59.785032, 29.952116], {}, {
+					preset: 'islands#darkGreenIcon'
+			});
+			myMap.geoObjects.add(myPlacemark1);
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
+
 	$(document).on('click', '.header-menuMob', function(){
 		$(document).find('.header-menuActive-wrap').addClass('active');
 		$(document).find('body').attr('style','position: fixed');
@@ -224,6 +240,7 @@ function resizewindow() {
 	
 	if (screen.width < 1919 && screen.width >= 1024) {
 		$(document).find('.filter-title-br').attr('style', 'display: none');
+		$(document).find('.header-logo__img').attr('src', 'assets/images/logo.png');	
 		$(document).find('.consult-block-right__img').attr('src', 'assets/images/consult-tanya.png');
 		let numBr = $(document).find('.del');
 		for(i = 0; i < numBr.length; i++){
@@ -237,6 +254,7 @@ function resizewindow() {
 
 	if (screen.width < 1023 && screen.width >= 768) {
 		$(document).find('.filter-title-br').attr('style', 'display: none');
+		$(document).find('.header-logo__img').attr('src', 'assets/images/logo.png');	
 		let numBr = $(document).find('.del');
 		for(i = 0; i < numBr.length; i++){
 			numBr.eq(i).attr('style', 'display: none');

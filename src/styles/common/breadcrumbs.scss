@@ -1,0 +1,40 @@
+.breadcrumbs{
+	margin-top: 80px;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	font-family: 'Noto Sans', serif;
+	&-link, &-sep{
+		margin-right: 10px;
+	}
+	&-link{
+		color: #824c3d;
+	}
+	&-notlink{
+		color: #343434;
+	}
+}
+@include w1366{
+	.breadcrumbs{
+		margin-top: 70px;
+		padding-left: 100px;
+		padding-right: 80px;
+	}
+}
+@include w1024{
+	.breadcrumbs{
+		margin-top: 50px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+@include w480{
+	.breadcrumbs{
+		margin-top: 30px;
+	}
+}
+@include w320{
+	.breadcrumbs{
+		margin-top: 20px;
+	}
+}

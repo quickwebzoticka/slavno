@@ -1,5 +1,5 @@
 .consult{
-	margin-top: 180px;
+	margin-bottom: 100px;
 	&-wrap{
 		background-color: #fff;
 		border-bottom: 10px  solid #e0dddc;		
@@ -325,23 +325,18 @@
 		}
 	}
 }
-@include w1366{
-	.consult{
-		margin-top: 150px;
-	}
-}
 @include w1024{
 	.consult{
-		margin-top: 85px;
+		margin-bottom: 70px;
 	}
 }
 @include w768{
 	.consult{
-		margin-top: 55px;
+		margin-bottom: 60px;
 	}
 }
 @include w320{
 	.consult{
-		margin-top: 25px;
+		margin-bottom: 40px;
 	}
 }
