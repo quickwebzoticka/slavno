@@ -1,5 +1,5 @@
 .consult{
-	margin-top: 180px;
+	margin-bottom: 100px;
 	&-wrap{
 		background-color: #fff;
 		border-bottom: 10px  solid #e0dddc;		
@@ -8,7 +8,6 @@
 	}
 	&-block{
 		width: 100%;
-		height: 445px;
 		display: flex;
 		justify-content: space-between;
 		&-left{
@@ -34,9 +33,6 @@
 				margin-top: 40px;
 				&-form{
 					display: flex;
-					&-pair{
-						
-					}
 					& label{
 						display: block;
 						font-family: 'Noto Serif', serif;
@@ -48,7 +44,7 @@
 					& input{
 						padding: 15px;
 						font-family: 'Noto Sans', serif;
-						border: 1px solid #eeeeee;
+						border: 2px solid #eeeeee;
 						width: 230px;
 						margin-right: 40px;
 						color: #c9c9c9;
@@ -61,6 +57,39 @@
 						}
 						&::-ms-input-placeholder { /* Microsoft Edge */
 							color: #c9c9c9;
+						}
+					}
+					@include w1366{
+						& label{
+							font-size: 12.6px;
+						}
+						& input{
+							width: 210px;
+							margin-right: 35px;
+							padding: 10px 15px;
+						}
+					}
+					@include w1024{
+						& label{
+							font-size: 11.2px;
+						}
+						& input{
+							width: 185px;
+							font-size: 12.8px;
+							margin-right: 30px;
+						}
+					}
+					& input{
+						width: 185px;
+						font-size: 12.8px;
+						margin-right: 30px;
+					}
+					@include w480{
+						&-pair{
+							margin-bottom: 18px;
+						}
+						& input{
+							width: 100%;
 						}
 					}
 				}
@@ -98,6 +127,25 @@
 						z-index: 2;
 						cursor: pointer;
 					}
+					@include w1366{
+						&__link{
+							height: 45px;
+							padding: 16px 0;
+						}
+						&:before{
+							height: 45px;
+						}
+					}
+					@include w1024{
+						&__link{
+							font-size: 11px;
+							height: 40px;
+							padding: 13px 0;
+						}
+						&:before{
+							height: 40px;
+						}
+					}
 					&:hover &__link{
 						border-bottom: 1px solid #6a8e41;
 						background: linear-gradient(#b1d588, #7f9f5a);
@@ -113,6 +161,25 @@
 						left: -1px;
 					}
 				}
+				@include w1366{
+					&-btn{
+						width: 225px;
+					}
+				}
+				@include w1024{
+					&-btn{
+						width: 200px;
+						margin-top: 26px;
+					}
+				}
+				@include w480{
+					&-form{
+						flex-direction: column;
+					}
+					&-btn{
+						margin-top: 5px;
+					}
+				}
 			}
 			&__privacy{
 				max-width: 420px;
@@ -120,10 +187,156 @@
 				font-family: 'Noto Sans', serif;
 				font-size: 11px;
 				margin-top: 15px;
+				& a{
+					color: #b4c3a8;
+					text-decoration: underline;
+				}
+			}
+			@include w1366{
+				&__title{
+					font-size: 28px;
+					line-height: 38px;
+				}
+				&__text{
+					font-size: 18px;
+				}
+				&__privacy{
+					font-size: 10px;
+				}
+			}
+			@include w1024{
+				&__title{
+					font-size: 27px;
+					line-height: 36px;
+				}
+				&__text{
+					font-size: 16.5px;
+				}
+				&__privacy{
+					font-size: 8.8px;
+    			max-width: 330px;
+				}
+			}
+			@include w768{
+				&-main{
+					margin-top: 20px;
+				}
+				&__title{
+					font-size: 25px;
+					line-height: 35px;
+					margin-bottom: 20px;
+				}
+				&__text{
+					max-width: 360px;
+    			line-height: 23px;
+					font-size: 17.5px;
+				}
+			}
+			@include w480{
+				&-main{
+					flex-direction: column;
+				}
+				&__title{
+					text-align: center;
+    			font-size: 24px;
+					line-height: 34px;
+					margin-bottom: 5px;
+				}
+				&__text{
+					text-align: center;
+					font-size: 13px;
+					line-height: 20px;
+				}
+			}
+			@include w320{
+				&__title{
+					font-size: 18px;
+    			line-height: 27px;
+				}
+			}
+		}
+		@include w1366{
+			&-left{
+				padding-left: 70px;
+				padding-top: 50px;
+			}
+		}
+		@include w1024{
+			&-left{
+				padding-left: 40px;
+				padding-bottom: 70px;
+				position: relative;
+				z-index: 2;
+			}
+		}
+		@include w768{
+			&-left{
+				padding-bottom: 50px;
+			}
+		}
+		@include w480{
+			&-left{
+				padding-left: 0;
+    		padding-top: 30px;
 			}
 		}
 		&-right{
 			display: flex;
+			align-items: flex-end;
+			@include w1366{
+				& img{
+					width: 425px;
+				}
+			}
+			@include w1024{
+				& img{
+					position: absolute;
+					left: -340px;
+    			width: 350px;
+				}
+			}
+			@include w768{
+				& img{
+					left: auto;
+    			right: -20px;
+    			width: 180px;
+				}
+			}
+			@include w480{
+				& img{
+					display: none;
+				}
+			}
 		}
+		@include w1024{
+			&-right{
+				position: relative;
+			}
+		}
+	}
+	@include w768{
+		&-wrap{
+			overflow: hidden;
+		}
+	}
+	@include w480{
+		&-block{
+			justify-content: center;
+		}
+	}
+}
+@include w1024{
+	.consult{
+		margin-bottom: 70px;
+	}
+}
+@include w768{
+	.consult{
+		margin-bottom: 60px;
+	}
+}
+@include w320{
+	.consult{
+		margin-bottom: 40px;
 	}
 }

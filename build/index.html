@@ -5,7 +5,7 @@
     <title>Главная</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <meta content="width=device-width, i nitial-scale=1" name="vieport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
@@ -16,18 +16,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/scripts/sumoselect/jquery.sumoselect.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="assets/scripts/main.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="header-menuActive-wrap"><img class="header-menuClose__img" src="assets/images/close.png" alt="Закрыть">
-        <nav class="header-menuActive"><a class="header-menu__item" href="#">Главная</a><a class="header-menu__item" href="#">Иннола Парк</a><a class="header-menu__item" href="#">Изумрудный Город</a><a class="header-menu__item" href="#">Новости и Акции</a><a class="header-menu__item" href="#">Контакты</a></nav>
+        <nav class="header-menuActive"><a class="header-menu__item" href="index.html">Главная</a><a class="header-menu__item" href="#">Иннола Парк</a><a class="header-menu__item" href="#">Изумрудный Город</a><a class="header-menu__item" href="news.html">Новости и Акции</a><a class="header-menu__item" href="contacts.html">Контакты</a></nav>
       </div>
       <div class="header">
         <div class="containerWide">
           <div class="header-block">
             <div class="header-logo"><img class="header-logo__img" src="assets/images/logo.png" alt="Логотип"></div>
-            <nav class="header-menu active"><a class="header-menu__item" href="#">Главная</a><a class="header-menu__item" href="#">Иннола Парк</a><a class="header-menu__item" href="#">Изумрудный Город</a><a class="header-menu__item" href="#">Новости и Акции</a><a class="header-menu__item" href="#">Контакты</a></nav>
+            <nav class="header-menu active"><a class="header-menu__item" href="index.html">Главная</a><a class="header-menu__item" href="#">Иннола Парк</a><a class="header-menu__item" href="#">Изумрудный Город</a><a class="header-menu__item" href="news.html">Новости и Акции</a><a class="header-menu__item" href="contacts.html">Контакты</a></nav>
             <div class="header-menuMob">
               <div class="header-menuMob-top"><img class="header-menuMob-top__img" src="assets/images/menu.png" alt="Меню">
                 <div class="header-menuMob-top__text">Меню</div>
@@ -42,14 +44,16 @@
             <div class="header-but"><a class="header-but__link" href="#">Закажите звонок</a></div>
           </div>
         </div>
+        <div class="container">
+        </div>
       </div>
       <div class="first-bg">
         <div class="banner">
           <div class="container">
             <div class="banner-block">
-              <div class="banner-block-left">
+              <div class="banner-block-left"><img class="banner-block-left-bird" src="assets/images/ban-birds.png" alt="Птицы">
                 <div class="banner-block-left__title">Продаем <span class="redText">земельные участки </span><span class="smallText">со всеми коммуникациями в 5&nbsp;км. от КАД</span></div>
-                <div class="banner-block-left__text">В охраняемых коттеджных поселках от 800 тыс. рублей</div>
+                <div class="banner-block-left__text">В охраняемых коттеджных поселках от&nbsp;800&nbsp;тыс. рублей</div>
                 <div class="banner-block-left-but"> <a class="banner-block-left-but__link" href="#">Подобрать участок</a></div>
               </div>
               <div class="banner-block-right">
@@ -62,27 +66,27 @@
                 <div class="banner-block-right-item"><img class="banner-block-right-item__img" src="assets/images/banner-item2.png" alt="advantage">
                   <div class="banner-block-right-item-right">
                     <div class="banner-block-right-item-right__title">Развитая инфраструтура</div>
-                    <div class="banner-block-right-item-right__text">Все объекты<br> в 10 минутах езды<br> от поселка</div>
+                    <div class="banner-block-right-item-right__text">Все объекты<br class="banner-br-del"> в 10 минутах езды<br class="banner-br-del"> от поселка</div>
                   </div>
                 </div>
                 <div class="banner-block-right-item"><img class="banner-block-right-item__img" src="assets/images/banner-item3.png" alt="advantage">
                   <div class="banner-block-right-item-right">
                     <div class="banner-block-right-item-right__title">Без посредников</div>
-                    <div class="banner-block-right-item-right__text">Участки<br> в собственности девелопера</div>
+                    <div class="banner-block-right-item-right__text">Участки<br class="banner-br-del"> в собственности девелопера</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="filter">
+        <div class="filter"><img class="filter-zelenSleva" src="assets/images/ban-zelen-sleva.png" alt=""><img class="filter-zelenSprava" src="assets/images/ban-zelen-sprava.png" alt="">
           <div class="containerWide">
             <div class="filter-wrap">
               <div class="container">
                 <div class="filter-block">
                   <div class="filter-block-left"><img class="filter-block-left__img" src="assets/images/filter-man.png" alt="consult"></div>
                   <form class="filter-block-right" action="">
-                    <div class="filter-block-right__title">Подберите себе<br> идеальный для жизни участок <span>за 30 секунд</span></div>
+                    <div class="filter-block-right__title">Подберите себе<br class="filter-title-br"> идеальный для жизни участок <span>за 30 секунд</span></div>
                     <div class="filter-block-right-row">
                       <div class="filter-block-right-cost"> 
                         <div class="filter-block-right-cost__title">Стоимость</div>
@@ -114,10 +118,12 @@
                     <div class="filter-block-right-row">
                       <div class="filter-block-right-status">
                         <div class="filter-block-right-status__title">Статус участка</div>
-                        <input class="filter-block-right-status__check" type="checkbox" id="DPK">
-                        <label class="filter-block-right-status__label" for="DPK">ДПК с пропиской</label>
-                        <input class="filter-block-right-status__check" type="checkbox" id="IZS">
-                        <label class="filter-block-right-status__label" for="IZS">ИЖС</label>
+                        <div class="filter-block-right-status-wrap">
+                          <input class="filter-block-right-status__check" type="checkbox" id="DPK">
+                          <label class="filter-block-right-status__label" for="DPK">ДПК с пропиской</label>
+                          <input class="filter-block-right-status__check" type="checkbox" id="IZS">
+                          <label class="filter-block-right-status__label" for="IZS">ИЖС</label>
+                        </div>
                       </div>
                       <div class="filter-block-right-comm">
                         <div class="filter-block-right-comm__title">Коммуникации</div>
@@ -201,37 +207,33 @@
             </div>
           </div>
         </div>
-        <div class="slider">
+        <div class="slider"><img class="slider-leftZelen" src="assets/images/zelen-sleva.png" alt="Зелень"><img class="slider-rightZelen" src="assets/images/zelen-sprava.png" alt="Зелень"><img class="slider-sliderBirds" src="assets/images/slider-birds.png" alt="Птицы">
           <div class="container">
             <div class="slider__title">Уже куплено <span>около 60% участков</span> в посёлке Иннола парк <span>и&nbsp;более&nbsp;30%</span> в Изумрудном городе</div>
             <div class="slider__text">Люди строят дома, а так же есть и те, кто готовится к заселению</div>
           </div>
-          <div class="containerWide">
-            <div class="slider-block">
-              <div class="slider-block-prev"><img class="slider-block-prev__img" src="" alt="arrow-prev"></div>
-              <div class="slider-block-inn">
-                <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
-                  <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
-                </div>
-                <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
-                  <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
-                </div>
-                <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
-                  <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
-                </div>
-                <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
-                  <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
-                </div>
-                <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
-                  <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
-                </div>
+          <div class="slider-block">
+            <div class="slider-block-prev"><img class="slider-block-prev__img" src="" alt="Предыдущий слайд"></div>
+            <div class="slider-block-inn">
+              <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
+                <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
               </div>
-              <div class="slider-block-next"><img class="slider-block-next__img" src="" alt="arrow-next"></div>
+              <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
+                <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
+              </div>
+              <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
+                <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
+              </div>
+              <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
+                <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
+              </div>
+              <div class="slider-block-item"><img src="assets/images/foto-slider.jpg" alt="slider-foto">
+                <div class="slider-block-item-hover"><img class="slider-block-item-hover__img" src="assets/images/more-icon.png" alt="more"></div>
+              </div>
             </div>
+            <div class="slider-block-next"><img class="slider-block-next__img" src="" alt="Следующий слайд"></div>
           </div>
         </div>
-      </div>
-      <div class="third-bg">
         <div class="economy">
           <div class="container">
             <div class="economy-block">
@@ -241,8 +243,8 @@
           </div>
         </div>
         <div class="uchastki">
-          <div class="container">
-            <div class="uchastki-block">
+          <div class="uchastki-block">
+            <div class="uchastki-block-inn">
               <div class="uchastki-item">
                 <div class="uchastki-item-inn"><img class="uchastki-item__img" src="assets/images/uchastok.jpg" alt="uchastok">
                   <div class="uchastki-item__title">Участок №416</div>
@@ -321,15 +323,15 @@
                 <div class="doverie-block-main-right">
                   <div class="doverie-block-main-right-item">
                     <div class="doverie-block-main-right-item__title">Мы не переплачиваем</div>
-                    <div class="doverie-block-main-right-item__text">У нас работают только ключевые сотрудники. Чтобы офисные расходы не «проедали» бюджет на инфраструктуру посёлков.</div>
+                    <div class="doverie-block-main-right-item__text">У нас работают только ключевые сотрудники.<br class="del"> Чтобы офисные расходы не «проедали» бюджет<br class="del"> на инфраструктуру посёлков.</div>
                   </div>
                   <div class="doverie-block-main-right-item">
                     <div class="doverie-block-main-right-item__title">Все участки в собственности</div>
-                    <div class="doverie-block-main-right-item__text">Вы покупаете участок без посредников. И сразу же оформляете его в собственность. Все документы в наличии.</div>
+                    <div class="doverie-block-main-right-item__text">Вы покупаете участок без посредников.<br class="del"> И сразу же оформляете его в собственность.<br class="del"> Все документы в наличии.</div>
                   </div>
                   <div class="doverie-block-main-right-item">
                     <div class="doverie-block-main-right-item__title">Опыт работы 5 лет</div>
-                    <div class="doverie-block-main-right-item__text">Опыт каждого сотрудника от 5 лет. Лично я, будучи наёмным работником, сдал 4 посёлка.</div>
+                    <div class="doverie-block-main-right-item__text">Опыт каждого сотрудника от 5 лет.<br class="del"> Лично я, будучи наёмным работником,<br class="del"> сдал 4 посёлка.</div>
                   </div>
                 </div>
               </div>
@@ -348,16 +350,16 @@
                       <form class="consult-block-left-main-form" action="">
                         <div class="consult-block-left-main-form-pair">
                           <label for="name">Как вас зовут</label>
-                          <input type="text" name="name" id="name" placeholder="Андрей">
+                          <input class="consult-block-left-main-form__name" type="text" name="name" id="name" placeholder="Андрей" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Андрей'">
                         </div>
                         <div class="consult-block-left-main-form-pair">
                           <label for="tel">Телефон</label>
-                          <input type="tel" name="tel" id="tel" placeholder="+7 812 999 23 44">
+                          <input class="consult-block-left-main-form__tel" type="tel" name="tel" id="tel" placeholder="+7 812 999 23 44" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 812 999 23 44'">
                         </div>
                       </form>
                       <div class="consult-block-left-main-btn"> <a class="consult-block-left-main-btn__link" href="#">Заказать звонок</a></div>
                     </div>
-                    <div class="consult-block-left__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конциденциальности</div>
+                    <div class="consult-block-left__privacy">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с политикой конциденциальности</div>
                   </div>
                   <div class="consult-block-right"><img class="consult-block-right__img" src="assets/images/consult-tanya.jpg" alt="consult"></div>
                 </div>
@@ -381,18 +383,28 @@
           <div class="footer-block">
             <div class="footer-block-info">
               <div class="footer-block-info-logo"><img class="footer-block-info-logo__img" src="assets/images/logo.png" alt="Логотип"></div>
-              <div class="footer-block-info__text">Лен. обл., Ломоносовский район, Аннинское городское поселение, коттеджный поселок «Изумрудный город» </div>
-              <div class="footer-block-info__pairText">
-                <div class="footer-block-info__pairText__pair">ОГРН: 2659845165126334</div>
-                <div class="footer-block-info__pairText__pair">БИК: 161843211459</div>
+              <div class="footer-block-info-wrap-width">
+                <div class="footer-block-info__text">Лен. обл., Ломоносовский район, Аннинское городское поселение, коттеджный поселок «Изумрудный город» </div>
+                <div class="footer-block-info__pairText">
+                  <div class="footer-block-info__pairText__pair">ОГРН: 2659845165126334</div>
+                  <div class="footer-block-info__pairText__pair">БИК: 161843211459</div>
+                </div>
               </div>
-              <div class="footer-block-info__text">© Славные просторы 2018<br><a href="#">Политика конфиденциальности</a></div>
-              <div class="footer-block-info__pairText">Сделано в<img class="footer-block-info__img" src="assets/images/footer-made.png" alt="RA"></div>
+              <div class="footer-block-info-wrap">
+                <div class="footer-block-info__text2">© Славные просторы 2018<br><a href="#">Политика конфиденциальности</a></div>
+                <div class="footer-block-info__pairText2">Сделано в<a href="#"><img class="footer-block-info__img" src="assets/images/footer-made.png" alt="RA"></a></div>
+              </div>
             </div>
             <div class="footer-block-menus">
-              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title" href="#">Иннола Парк</a><a class="footer-block-menus-list__item" href="#">Запись на экскурсию</a><a class="footer-block-menus-list__item" href="#">Местонахождение</a><a class="footer-block-menus-list__item" href="#">Инфраструктура</a><a class="footer-block-menus-list__item" href="#">Экология</a><a class="footer-block-menus-list__item" href="#">Коммуникации</a><a class="footer-block-menus-list__item" href="#">Что построено</a><a class="footer-block-menus-list__item" href="#">Услуги</a><a class="footer-block-menus-list__item" href="#">Документация</a><a class="footer-block-menus-list__item" href="#">Выбор участка</a><a class="footer-block-menus-list__item" href="#">Акции</a></div>
-              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title" href="#">Изумрудный город</a><a class="footer-block-menus-list__item" href="#">Запись на экскурсию</a><a class="footer-block-menus-list__item" href="#">Местонахождение</a><a class="footer-block-menus-list__item" href="#">Инфраструктура</a><a class="footer-block-menus-list__item" href="#">Экология</a><a class="footer-block-menus-list__item" href="#">Коммуникации</a><a class="footer-block-menus-list__item" href="#">Что построено</a><a class="footer-block-menus-list__item" href="#">Услуги</a><a class="footer-block-menus-list__item" href="#">Документация</a><a class="footer-block-menus-list__item" href="#">Выбор участка</a><a class="footer-block-menus-list__item" href="#">Акции</a></div>
-              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title" href="#">Новости и Акции</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a></div>
+              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title in" href="#">Иннола Парк</a>
+                <div class="footer-block-menus-list-wrap"><a class="footer-block-menus-list__item" href="#">Запись на экскурсию</a><a class="footer-block-menus-list__item" href="#">Местонахождение</a><a class="footer-block-menus-list__item" href="#">Инфраструктура</a><a class="footer-block-menus-list__item" href="#">Экология</a><a class="footer-block-menus-list__item" href="#">Коммуникации</a><a class="footer-block-menus-list__item" href="#">Что построено</a><a class="footer-block-menus-list__item" href="#">Услуги</a><a class="footer-block-menus-list__item" href="#">Документация</a><a class="footer-block-menus-list__item" href="#">Выбор участка</a><a class="footer-block-menus-list__item" href="#">Акции</a></div>
+              </div>
+              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title in" href="#">Изумрудный город</a>
+                <div class="footer-block-menus-list-wrap"><a class="footer-block-menus-list__item" href="#">Запись на экскурсию</a><a class="footer-block-menus-list__item" href="#">Местонахождение</a><a class="footer-block-menus-list__item" href="#">Инфраструктура</a><a class="footer-block-menus-list__item" href="#">Экология</a><a class="footer-block-menus-list__item" href="#">Коммуникации</a><a class="footer-block-menus-list__item" href="#">Что построено</a><a class="footer-block-menus-list__item" href="#">Услуги</a><a class="footer-block-menus-list__item" href="#">Документация</a><a class="footer-block-menus-list__item" href="#">Выбор участка</a><a class="footer-block-menus-list__item" href="#">Акции</a></div>
+              </div>
+              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title in" href="#">Новости и Акции</a>
+                <div class="footer-block-menus-list-wrap"><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a></div>
+              </div>
             </div>
             <div class="footer-block-contacts">
               <div class="footer-block-contacts-tel">

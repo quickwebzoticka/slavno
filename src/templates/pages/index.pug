@@ -9,10 +9,11 @@ block content
 			.container
 				.banner-block
 					.banner-block-left
+						img.banner-block-left-bird(src="assets/images/ban-birds.png", alt="Птицы")
 						.banner-block-left__title Продаем 
 							span.redText земельные участки 
 							span.smallText со всеми коммуникациями в 5&nbsp;км. от КАД
-						.banner-block-left__text В охраняемых коттеджных поселках от 800 тыс. рублей
+						.banner-block-left__text В охраняемых коттеджных поселках от&nbsp;800&nbsp;тыс. рублей
 						.banner-block-left-but 
 							a.banner-block-left-but__link(href="#") Подобрать участок
 					.banner-block-right
@@ -25,13 +26,15 @@ block content
 							img.banner-block-right-item__img(src="assets/images/banner-item2.png", alt="advantage")
 							.banner-block-right-item-right
 								.banner-block-right-item-right__title Развитая инфраструтура
-								.banner-block-right-item-right__text Все объекты<br> в 10 минутах езды<br> от поселка
+								.banner-block-right-item-right__text Все объекты<br class="banner-br-del"> в 10 минутах езды<br class="banner-br-del"> от поселка
 						.banner-block-right-item
 							img.banner-block-right-item__img(src="assets/images/banner-item3.png", alt="advantage")
 							.banner-block-right-item-right
 								.banner-block-right-item-right__title Без посредников
-								.banner-block-right-item-right__text Участки<br> в собственности девелопера
+								.banner-block-right-item-right__text Участки<br class="banner-br-del"> в собственности девелопера
 		.filter
+			img.filter-zelenSleva(src="assets/images/ban-zelen-sleva.png", alt="")
+			img.filter-zelenSprava(src="assets/images/ban-zelen-sprava.png", alt="")
 			.containerWide
 				.filter-wrap
 					.container
@@ -39,7 +42,7 @@ block content
 							.filter-block-left
 								img.filter-block-left__img(src="assets/images/filter-man.png", alt="consult")
 							form.filter-block-right(action="")
-								.filter-block-right__title Подберите себе<br> идеальный для жизни участок <span>за 30 секунд</span>
+								.filter-block-right__title Подберите себе<br class="filter-title-br"> идеальный для жизни участок <span>за 30 секунд</span>
 								.filter-block-right-row
 									.filter-block-right-cost 
 										.filter-block-right-cost__title Стоимость
@@ -64,10 +67,11 @@ block content
 								.filter-block-right-row
 									.filter-block-right-status
 										.filter-block-right-status__title Статус участка
-										input.filter-block-right-status__check(type="checkbox" id="DPK")
-										label.filter-block-right-status__label(for="DPK") ДПК с пропиской
-										input.filter-block-right-status__check(type="checkbox" id="IZS")
-										label.filter-block-right-status__label(for="IZS") ИЖС
+										.filter-block-right-status-wrap
+											input.filter-block-right-status__check(type="checkbox" id="DPK")
+											label.filter-block-right-status__label(for="DPK") ДПК с пропиской
+											input.filter-block-right-status__check(type="checkbox" id="IZS")
+											label.filter-block-right-status__label(for="IZS") ИЖС
 									.filter-block-right-comm
 										.filter-block-right-comm__title Коммуникации
 										select.filter-block-right-comm__select(multiple="multiple")
@@ -137,13 +141,15 @@ block content
 							.choice-block-main-right-but
 								a.choice-block-main-right-but__link(href="#") Узнать подробнее
 		.slider
+			img.slider-leftZelen(src="assets/images/zelen-sleva.png", alt="Зелень")
+			img.slider-rightZelen(src="assets/images/zelen-sprava.png", alt="Зелень")
+			img.slider-sliderBirds(src="assets/images/slider-birds.png", alt="Птицы")
 			.container
 				.slider__title Уже куплено <span>около 60% участков</span> в посёлке Иннола парк <span>и&nbsp;более&nbsp;30%</span> в Изумрудном городе
 				.slider__text Люди строят дома, а так же есть и те, кто готовится к заселению
-			.containerWide
-				.slider-block
+			.slider-block
 					.slider-block-prev
-						img.slider-block-prev__img(src="", alt="arrow-prev")
+						img.slider-block-prev__img(src="", alt="Предыдущий слайд")
 					.slider-block-inn
 						.slider-block-item
 							img(src="assets/images/foto-slider.jpg", alt="slider-foto")
@@ -166,72 +172,71 @@ block content
 							.slider-block-item-hover
 								img.slider-block-item-hover__img(src="assets/images/more-icon.png", alt="more")
 					.slider-block-next
-						img.slider-block-next__img(src="", alt="arrow-next")
-	.third-bg
+						img.slider-block-next__img(src="", alt="Следующий слайд")
 		.economy
 			.container
 				.economy-block
 					.economy__title Сэкономьте от 120 000 рублей <span>на покупке участка со всеми коммуникациями</span>
 					.economy__text Акция действительна до: <span>31 декабря 2018 года</span>
 		.uchastki
-			.container
-				.uchastki-block
-					.uchastki-item
-						.uchastki-item-inn
-							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
-							.uchastki-item__title Участок №416
-							.uchastki-item-square
-								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
-								.uchastki-item-square__text 8 соток
-							.uchastki-item-price
-								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
-								.uchastki-item-price-text
-									.uchastki-item-price-text-oldprice 1 200 350 руб.
-									.uchastki-item-price-text-newprice 1 200 350 руб.
-							.uchastki-item-btn
-								a.uchastki-item-btn__link Посмотреть участок
-					.uchastki-item
-						.uchastki-item-inn
-							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
-							.uchastki-item__title Участок №416
-							.uchastki-item-square
-								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
-								.uchastki-item-square__text 8 соток
-							.uchastki-item-price
-								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
-								.uchastki-item-price-text
-									.uchastki-item-price-text-oldprice 1 200 350 руб.
-									.uchastki-item-price-text-newprice 1 200 350 руб.
-							.uchastki-item-btn
-								a.uchastki-item-btn__link Посмотреть участок
-					.uchastki-item
-						.uchastki-item-inn
-							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
-							.uchastki-item__title Участок №416
-							.uchastki-item-square
-								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
-								.uchastki-item-square__text 8 соток
-							.uchastki-item-price
-								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
-								.uchastki-item-price-text
-									.uchastki-item-price-text-oldprice 1 200 350 руб.
-									.uchastki-item-price-text-newprice 1 200 350 руб.
-							.uchastki-item-btn
-								a.uchastki-item-btn__link Посмотреть участок
-					.uchastki-item
-						.uchastki-item-inn
-							img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
-							.uchastki-item__title Участок №416
-							.uchastki-item-square
-								img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
-								.uchastki-item-square__text 8 соток
-							.uchastki-item-price
-								img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
-								.uchastki-item-price-text
-									.uchastki-item-price-text-oldprice 1 200 350 руб.
-									.uchastki-item-price-text-newprice 1 200 350 руб.
-							.uchastki-item-btn
-								a.uchastki-item-btn__link Посмотреть участок
+			.uchastki-block
+				.uchastki-block-inn
+						.uchastki-item
+							.uchastki-item-inn
+								img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+								.uchastki-item__title Участок №416
+								.uchastki-item-square
+									img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+									.uchastki-item-square__text 8 соток
+								.uchastki-item-price
+									img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+									.uchastki-item-price-text
+										.uchastki-item-price-text-oldprice 1 200 350 руб.
+										.uchastki-item-price-text-newprice 1 200 350 руб.
+								.uchastki-item-btn
+									a.uchastki-item-btn__link Посмотреть участок
+						.uchastki-item
+							.uchastki-item-inn
+								img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+								.uchastki-item__title Участок №416
+								.uchastki-item-square
+									img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+									.uchastki-item-square__text 8 соток
+								.uchastki-item-price
+									img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+									.uchastki-item-price-text
+										.uchastki-item-price-text-oldprice 1 200 350 руб.
+										.uchastki-item-price-text-newprice 1 200 350 руб.
+								.uchastki-item-btn
+									a.uchastki-item-btn__link Посмотреть участок
+						.uchastki-item
+							.uchastki-item-inn
+								img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+								.uchastki-item__title Участок №416
+								.uchastki-item-square
+									img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+									.uchastki-item-square__text 8 соток
+								.uchastki-item-price
+									img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+									.uchastki-item-price-text
+										.uchastki-item-price-text-oldprice 1 200 350 руб.
+										.uchastki-item-price-text-newprice 1 200 350 руб.
+								.uchastki-item-btn
+									a.uchastki-item-btn__link Посмотреть участок
+						.uchastki-item
+							.uchastki-item-inn
+								img.uchastki-item__img(src="assets/images/uchastok.jpg", alt="uchastok")
+								.uchastki-item__title Участок №416
+								.uchastki-item-square
+									img.uchastki-item-square__img(src="assets/images/uchastok-square.png", alt="square")
+									.uchastki-item-square__text 8 соток
+								.uchastki-item-price
+									img.uchastki-item-price__img(src="assets/images/uchastok-price.png", alt="square")
+									.uchastki-item-price-text
+										.uchastki-item-price-text-oldprice 1 200 350 руб.
+										.uchastki-item-price-text-newprice 1 200 350 руб.
+								.uchastki-item-btn
+									a.uchastki-item-btn__link Посмотреть участок
 		.doverie
 			.container
 				.doverie-block
@@ -246,13 +251,13 @@ block content
 						.doverie-block-main-right
 							.doverie-block-main-right-item
 								.doverie-block-main-right-item__title Мы не переплачиваем
-								.doverie-block-main-right-item__text У нас работают только ключевые сотрудники. Чтобы офисные расходы не «проедали» бюджет на инфраструктуру посёлков.
+								.doverie-block-main-right-item__text У нас работают только ключевые сотрудники.<br class="del"> Чтобы офисные расходы не «проедали» бюджет<br class="del"> на инфраструктуру посёлков.
 							.doverie-block-main-right-item
 								.doverie-block-main-right-item__title Все участки в собственности
-								.doverie-block-main-right-item__text Вы покупаете участок без посредников. И сразу же оформляете его в собственность. Все документы в наличии.
+								.doverie-block-main-right-item__text Вы покупаете участок без посредников.<br class="del"> И сразу же оформляете его в собственность.<br class="del"> Все документы в наличии.
 							.doverie-block-main-right-item
 								.doverie-block-main-right-item__title Опыт работы 5 лет
-								.doverie-block-main-right-item__text Опыт каждого сотрудника от 5 лет. Лично я, будучи наёмным работником, сдал 4 посёлка.
+								.doverie-block-main-right-item__text Опыт каждого сотрудника от 5 лет.<br class="del"> Лично я, будучи наёмным работником,<br class="del"> сдал 4 посёлка.
 		include ../common/consult.pug
 	.text
 		.container

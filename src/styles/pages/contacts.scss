@@ -1,0 +1,22 @@
+.bg{
+	background: url('../images/contacts-bg.jpg') left top no-repeat;
+	background-size: 150% 90%;
+}
+@include w1366{
+	.bg{
+		background-size: cover;
+	}
+}
+.contacts{
+	padding-top: 160px;
+	&-wrap{
+		height: 900px;
+    background-color: #fff;
+    border-bottom: 10px solid #e0dddc;
+    border-radius: 15px;
+    box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.5);
+	}
+	&-block{
+		height: 100%;
+	}
+}
