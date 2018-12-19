@@ -18,11 +18,17 @@
 	width: 373px
 	height: 52px
 	margin-top: 0px
+	@include mob
+		width: 303px
 
 .banner-block-left-footer
 	display: flex
 	align-items: center
 	margin-top: 55px
+	@include mob
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
 .banner-block-left-footer__text
 	max-width: 176px
 	margin-left: 30px
@@ -32,6 +38,10 @@
 	font-size: 12px
 	font-weight: 400
 	line-height: 15px
+	@include mob
+		max-width: 100%
+		margin-left: 25px
+		font-size: 10px
 
 .list-wrapper
 	display: flex
@@ -40,12 +50,24 @@
 	padding: 63px 0px
 	@include tablet
 		justify-content: space-between
+	@include mob
+		padding: 0px
+		padding-left: 40px
+		padding-right: 40px
+	@include mob-micro
+		padding-left: 20px
+		padding-right: 20px
 
 .list-item
 	flex: 0 1 33%
 	margin-bottom: 70px
 	@include tablet
 		flex: 0 1 27%
+	@include mob
+		flex: 0 1 45%
+	@include mob-micro
+		flex: 0 1 100%
+		text-align: center
 
 
 .list-item__img
@@ -55,6 +77,13 @@
 		margin-bottom: 10px
 	img
 		height: 100%
+	@include mob
+		width: 80px
+		height: 56px
+		img
+			width: 100%
+	@include mob-micro
+		display: inline-block
 
 .list-item__img_height
 	img
@@ -70,6 +99,9 @@
 	line-height: 30px
 	@include tablet
 		font-size: 15px
+	@include mob
+		font-size: 11px
+		line-height: 14px
 
 .bold
 	font-weight: 700
@@ -88,6 +120,20 @@
     margin-bottom: 35px
     @include desctop
     	font-size: 33px
+    @include mob
+    	font-size: 28px
+    	margin-bottom: 15px
+    	text-align: center
+    @include mob-mini
+    	max-width: 67%
+    	margin: 0 auto
+    	margin-bottom: 15px
+    @include mob-micro
+    	font-size: 18px
+
+.video-block
+	@include mob-micro
+		margin-top: 50px
 
 .brown-cursive
 	font-style: italic
@@ -100,6 +146,11 @@
 	font-weight: 400
 	max-width: 930px
 	line-height: 27px
+	@include mob
+		text-align: center
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
 
 .video-player
 	margin: 60px auto
@@ -111,6 +162,9 @@
 			width: 100%
 	@include tablet
 		width: 100%
+	@include mob
+		margin-top: 38px
+		margin-bottom: 50px
 
 .video-player__button
 	width: 84px
@@ -156,9 +210,18 @@
 
 .map-block__head
 	line-height: 52.71px
+	@include mob
+		font-size: 25px
+		line-height: 35px
+	@include mob-micro
+		font-size: 18px
+		line-height: 27px
 
 .map-block__list
 	width: 500px
+	@include mob
+		width: 100%
+		padding-top: 40px
 
 .list-item__head
 	color: #191919
@@ -168,6 +231,8 @@
 	font-style: italic
 	line-height: 14.4px
 	margin-bottom: 14px
+	@include mob-micro
+		font-size: 15px
 
 .list-item__main
 	opacity: 0.6
@@ -176,17 +241,33 @@
 	font-size: 15px
 	font-weight: 400
 	line-height: 20px
+	@include mob-micro
+		font-size: 12px
+
 
 .map-block__list-item
 	flex: 0 1 50%
 	padding-left: 22px
 	border-left: 2px solid #824c3d
+	text-align: left
+	@include mob-micro
+		padding-left: 10px
+		.list-item__main
+			font-size: 10px
 
 .map-block__map
 	position: absolute
 	z-index: -1
 	top: -40%
 	left: -20%
+	@include mob
+		left: -71%
+		top: -56%
+	@include mob-mini
+		left: -221%
+		top: -16%
+	@include mob-micro
+		left: -256%
 
 .map-block__background
 	position: absolute
@@ -202,14 +283,29 @@
 	display: flex
 	align-items: center
 	justify-content: flex-start
+	@include mob-mini
+		flex-direction: column
 
 .benefits-img
 	margin: 0 200px 0 0
 	@include tablet
 		margin: 0 50px 0 0
+	@include mob
+		flex: 0 1 260px
+		img
+			width: 100%
+	@include mob-mini
+		margin: 0 auto
+		margin-bottom: 30px
 
 .benefits-text
 	flex: 0 1 580px
+	@include mob
+		flex: 0 1 360px 
+	.block__head
+		text-align: left
+		@include mob-micro
+			max-width: 85%
 
 .benefits-block
 	display: flex
@@ -221,11 +317,17 @@
 		margin: 0 0 0 200px
 		@include tablet
 			margin: 0 0 0 50px
+		@include mob-mini
+			order: -1
+			margin: 0 auto
+			margin-bottom: 30px
 
 .benefits
 	background: url(../img/benefits-background.png) no-repeat center bottom
 	background-size: cover
 	padding: 60px 0 0px
+	@include mob-mini
+		padding: 140px 0 0
 
 .benefits-text__title
 	color: #000000
@@ -233,6 +335,13 @@
 	font-size: 19px
 	font-style: italic
 	line-height: 27px
+	padding: 24px
+	position: relative
+	&:after
+		content: '—'
+		position: absolute
+		top: 20px
+		left: -5px
 
 .benefits-text__main
 	color: #000000
@@ -253,8 +362,12 @@
 	align-items: flex-start
 	margin-top: 70px
 	margin-bottom: 100px
+	@include mob
+		flex-wrap: wrap
 	img
 		width: 100%
+	@include mob-mini
+		margin-top: 0px
 
 .benefits-footer-block-item
 	&__text
@@ -268,6 +381,11 @@
 		@include tablet
 			font-size: 17px
 			line-height: 22.95px
+		@include mob
+			max-width: 560px
+		@include mob-mini
+			font-size: 10px
+			line-height: 15px
 	&__name
 		color: #474747
 		font-family: "Noto Serif"
@@ -275,6 +393,8 @@
 		font-weight: 700
 		font-style: italic
 		line-height: 30px
+		@include mob-mini
+			font-size: 12px
 	&__description
 		color: #6d6d6d
 		font-family: "Noto Serif"
@@ -282,6 +402,9 @@
 		font-style: italic
 		line-height: 24px
 		position: relative
+		@include mob-mini
+			font-size: 10px
+			line-height: 15px
 		&:after
 			display: block
 			content: ''
@@ -303,8 +426,20 @@
 			width: 560px
 			background-size: contain
 			padding: 48px 61px
+		@include mob
+			flex: 0 1 100%
+			order: -1
+			width: 100%
+			padding: 56px 61px
+		@include mob-mini
+			padding: 56px 32px
 	&_red-width
 		flex: 0 1 133px
+		@include mob
+			margin-left: 14px
+	&__img
+		@include mob
+			width: 116px !important
 
 
 .blue
@@ -317,6 +452,16 @@
 	font-weight: 400
 	max-width: 890px
 	line-height: 27px
+	@include mob
+		text-align: center
+		max-width: 625px
+		margin: 0 auto
+		font-size: 17px
+	@include mob-mini
+		font-size: 15px
+		font-weight: 400
+		line-height: 21px
+		max-width: 380px
 
 .benefits-footer-background
 	img
@@ -329,6 +474,21 @@
 	padding-top: 400px
 	@include tablet
 		margin-top: -460px
+	@include mob
+		.banner-block
+			flex-direction: column
+			align-items: center
+			.block__head
+				max-width: 510px
+				margin: 0 auto 15px
+			.benefits-footer-description__main
+				font-size: 17px
+				line-height: 21px
+				max-width: 560px
+			.banner-block-left-but_wide
+				margin: 0 auto
+			.block_mt
+				order: -1
 
 .block__main_mb
 	margin-bottom: 42px
@@ -338,6 +498,8 @@
 	transform: translateY(-100px)
 	@include tablet
 		transform: none
+	@include mob-mini
+		transform: scale(0.5)
 
 .block-wrapper
 	display: flex
@@ -346,6 +508,11 @@
 	&_margin
 		margin-top: 71px
 		margin-bottom: 223px
+		@include mob
+			margin-bottom: 90px
+		@include mob-mini
+			flex-direction: column
+			align-items: center
 	&_center
 		align-items: center
 		justify-content: flex-start
@@ -357,16 +524,29 @@
 			margin-top: 100px
 			.benefits-text_2
 				margin-right: 10px
+		@include mob
+			justify-content: flex-start
+			padding: 0 20px
 	&_width
 		@include desctop
 			.block-item
 				flex: 0 1 208px 
+		@include mob
+			flex-wrap: wrap
+			.block-item
+				flex: 0 1 45%
+				margin-bottom: 30px
+				.block-item-text__main
+					max-width: 160px
+
 
 
 .block-item
 	flex: 0 1 400px
 	@include desctop
 		flex: 0 1 315px
+	@include mob
+		flex: 
 	&-text__title
 		color: #000000
 		font-family: "Noto Serif"
@@ -402,6 +582,8 @@
 	margin-left: -48%
 	@include desctop
 		width: 900px
+	@include mob
+		width: 300px
 	.slider-block-prev
 		left: unset
 		right: 130px
@@ -414,7 +596,7 @@
 		@include desctop
 			margin-right: -30%
 		@include tablet
-			margin-right: -53%
+			margin-right: -30%
 		.slider-block-prev
 			left: 30px
 			right: unset
@@ -423,8 +605,11 @@
 			right: unset
 	&_1
 		margin-right: 50px
+		@include desctop
+			margin-left: -30%
 		@include tablet
-			margin-left: -53%
+			margin-left: -30%
+
 
 .block__head_lined
 	position: relative
@@ -462,14 +647,14 @@
 		height: 150px
 		margin-bottom: 50px
 
-
-.block_pt
-	margin-top: 170px
-
 .doverie-block-main__img_shift-right
 	transform: translate(20px, 0)
 	@include tablet
 		transform: translate(0px, 55px)
+	@include mob-mini
+		transform: translate(0px, 71px)
+	@include mob-micro
+		transform: translate(0px, 15px)
 
 .doverie-block-main-left_wh
 	width: 685px
@@ -477,6 +662,31 @@
 	background: url(../img/doverie-bg-2.png) no-repeat center center
 	.doverie-block-main-left-inn
 		background: none
+	@include tablet
+		.doverie-block-main-left-inn
+			padding: 50px 20px 0 40px
+	@include mob
+		width: 450px
+		height: 357px
+		background-size: contain
+		.doverie-block-main-left-inn
+			padding: 
+		.doverie-block-main-left-inn__text
+			font-size: 13px
+			margin-bottom: 13px
+	@include mob-mini
+		width: 100%
+		height: 305px
+		.doverie-block-main-left-inn__text
+			line-height: 20px
+		.doverie-block-main-left-inn
+			padding: 32px 10px 30px 30px
+	@include mob-micro
+		background-size: 100% 100%
+		.doverie-block-main-left-inn
+			padding: 8px 10px 30px 30px
+		.doverie-block-main-left-inn__text
+			line-height: 16px
 
 .doverie-block-main-left-inn__author, .doverie-block-main-left-inn__prof
 	position: relative
@@ -490,6 +700,12 @@
 	@include tablet
 		bottom: 155px
 		width: 313px
+	@include mob
+		bottom: 200px
+	@include mob-mini
+		bottom: 354px
+	@include mob-micro
+		bottom: 404px
 
 .docs-block
 	margin-top: 330px
@@ -502,6 +718,19 @@
 			left: calc(100% + 20px)
 			top: 70%
 			transform: rotateY(180deg)
+			@include mob
+				top: 30%
+		@include mob
+			padding-left: 0px
+			text-align: left
+		@include mob-mini
+			display: block
+			margin: 0 auto
+			.cursive-brown
+				display: block
+				white-space: nowrap
+			&:after
+				display: none
 	&-main
 		margin-top: 73px
 		display: flex
@@ -515,10 +744,19 @@
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
+		@include mob-mini
+			flex-direction: column
+			align-items: center
+			text-align: center
+			&-item
+				margin-bottom: 30px
+
 		&-item
 			flex: 0 1 400px
 			@include tablet
 				flex: 0 1 245px
+			@include mob
+				flex: 0 1 203px
 			&__img 
 				height: 216px
 			&__text
@@ -533,12 +771,17 @@
 
 .choose-place
 	margin-top: 180px
+	@include mob
+		margin-top: 50px
 	&-main
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
 		@include tablet
 			flex-direction: column
+		@include mob
+			.filter-block-right-but__link
+				font-size: 10px
 		&-calc
 			flex: 0 1 481px
 			padding: 50px
@@ -558,6 +801,15 @@
 				flex-wrap: wrap
 				.SumoSelect
 					width: 100%
+			@include mob
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				padding: 50px 180px
+			@include mob-mini
+				padding: 50px
+			@include mob-micro
+				padding: 50px 5px
 			&-row
 				margin-bottom: 30px
 				@include tablet
@@ -567,14 +819,24 @@
 					.filter-block-right-cost-inputs, .filter-block-right-square-inputs
 						display: flex
 						justify-content: space-between
+				@include mob
+					width: 100%
+					.header-but__link
+						font-size: 10px
 			&-btn-wrapper
 				display: flex
 				align-items: center
 				justify-content: space-between
 				flex: 0 1 45%
+				@include mob-mini
+					width: 100%
 				&-button
 					flex: 0 1 45%
 					position: relative
+					@include mob-mini
+						.header-but__link
+							height: 40px
+							line-height: 25px
 					&_border
 						@include tablet
 							font-size: 12px
@@ -592,6 +854,8 @@
 
 .economy-wrapper
 	padding: 180px 0 100px
+	@include mob
+		padding: 75px 0 100px
 
 .consult-wrapper
 	padding: 100px 0
@@ -619,6 +883,9 @@
 	img
 		transform: translateY(-15%)
 		margin-left: 20px
+	@include mob
+		img
+			width: 100px
 
 .choose-place-main-map
 	img
@@ -634,3 +901,101 @@
 
 .block-wrapper_mt
 	margin-top: 180px
+	@include mob
+		margin-top: 110px
+		.block-item
+			flex: 0 1 150px
+			.block-item__img
+				height: 166px
+			.block-item-text__title
+				font-size: 17px
+			.block-item-text__main
+				font-size: 13px
+				line-height: 18.9px
+	@include mob-micro
+		margin-top: 60px
+
+.doverie-block-main-right_order
+	@include mob
+		flex-wrap: wrap
+		.doverie-block-main-right-item
+			flex: 0 1 50%
+			margin: 0px
+			margin-bottom: 30px
+	@include mob-mini
+		margin-top: 140px
+
+.benefits-footer-description
+	@include mob-mini
+		.block__head
+			max-width: 77%
+
+.block-wrapper_margin
+	@include mob-mini
+		.block-item
+			flex: 0 1 315px
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			.block-item-text
+				text-align: center
+				.block-item-text__title
+					display: inline-block
+					margin: 0 auto
+					margin-bottom: 15px
+	@include mob-micro
+		margin-top: 50px
+
+.block-with-slider
+	@include mob-mini
+		.block-wrapper
+			flex-direction: column
+			position: relative
+			margin-top: 100px
+			.block__head
+				position: absolute
+				bottom: calc(100% + 20px)
+				left: 50%
+				transform: translate(-50%, 0)
+			.block__head_lined:after
+				display: none
+			.block__head_lined2:after
+				display: none
+			.gallery-wrapper
+				margin: 0
+				margin-bottom: 80px
+				.slider-block-prev
+					right: 180px
+				.slider-block-next
+					right: 70px 
+			.gallery-wrapper_2
+				.slider-block-prev
+					right: 180px
+					left: unset
+				.slider-block-next
+					right: 70px 
+					left: unset
+			.benefits-text_2
+				order: 1
+
+.block-with-slider
+	@include mob-mini
+		padding: 0 15px
+	.benefits-text__title:after
+		left: -5px
+		top: 24px
+
+.block-wrapper
+	.block_pt
+		margin-top: 170px
+		@include mob
+			margin-top: 110px
+			.block__head
+				font-size: 25px
+		@include mob-mini
+			margin-top: 40px
+			.block__head
+				max-width: 100%
+			.block-item-text__main
+				max-width: 100%

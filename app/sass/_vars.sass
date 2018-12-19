@@ -1,5 +1,7 @@
 $regular-color: #eee
 $desctop: 1370px
+$mob-mini: 480px
+$mob-micro: 375px
 $mob: 768px
 $tablet: 1024px
 
@@ -13,4 +15,12 @@ $tablet: 1024px
 
 @mixin tablet
 	@media screen and (max-width: $tablet)
+		@content
+
+@mixin mob-mini
+	@media screen and (max-width: $mob-mini)
+		@content
+
+@mixin mob-micro
+	@media screen and (max-width: $mob-micro)
 		@content

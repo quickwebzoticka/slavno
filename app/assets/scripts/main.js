@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	let sliderItems = $(document).find('.slider-block-item');
+	let sliderPrev = $(document).find('.slider-block-prev__img');
+	let sliderNext = $(document).find('.slider-block-next__img');
+
 	if($(document).find('#YMapsID').length != 0){
 		ymaps.ready(function () {
 			var myMap = new ymaps.Map("YMapsID", {
@@ -58,7 +62,7 @@ $(document).ready(function(){
 	// 	showMaskOnFocus: true
 	// });
 
-	var slider = $('.slider-block-inn').slick({
+	var slider = $('.slider .slider-block-inn').slick({
 		arrows:false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -88,11 +92,11 @@ $(document).ready(function(){
 	});
 	$(document).on('click', '.slider-block-prev', function (e) {
 		slider.slick('slickPrev');
-		watchSlider();
+		watchSlider(sliderItems, sliderPrev, sliderNext);
 	});
 	$(document).on('click', '.slider-block-next', function (e) {
 		slider.slick('slickNext');
-		watchSlider();
+		watchSlider(sliderItems, sliderPrev, sliderNext);
 	});
 
 	var sliderUchastki = $('.uchastki-block-inn').slick({
@@ -131,7 +135,7 @@ $(document).ready(function(){
 			}
 		]
 	});
-	watchSlider();
+	watchSlider(sliderItems, sliderPrev, sliderNext);
 
 	changedRangeInput($(document).find('#rangeInputFirstPrice'));
 	changedRangeInput($(document).find('#rangeInputSecondPrice'));
@@ -167,10 +171,7 @@ $(document).ready(function(){
 	}
 });
 
-function watchSlider(){
-	let sliderItems = $(document).find('.slider-block-item');
-	let sliderPrev = $(document).find('.slider-block-prev__img');
-	let sliderNext = $(document).find('.slider-block-next__img');
+function watchSlider(sliderItems, sliderPrev, sliderNext){
 	if( sliderItems[0].classList.contains("slick-active") ){
 		sliderPrev.attr("src", "assets/images/arrow-prev-disabled.png");
 		sliderPrev.attr("style", "cursor: auto");

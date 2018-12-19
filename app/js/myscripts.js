@@ -12,37 +12,95 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		widthWindow  = $(window).width();
 	});
-	console.log(widthWindow);
 	if (widthWindow <= 1024) {
-		let slider3 = $('.gallery-wrapper_1  .slider-block-inn').slick({
+		var slider3 = $('.gallery-wrapper_1  .slider-block-inn').slick({
 			arrows:false,
-			slidesToShow: 1,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: false,
-			draggable: false
+			draggable: false,
+			swipe: false,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 769,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
-		let slider2 = $('.gallery-wrapper_2 .slider-block-inn').slick({
+		var slider2 = $('.gallery-wrapper_2 .slider-block-inn').slick({
 			arrows:false,
-			slidesToShow: 1,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: false,
-			draggable: false
+			draggable: false,
+			swipe: false,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 769,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
-		console.log('success');
 	} else {
-		let slider3 = $('.gallery-wrapper_1  .slider-block-inn').slick({
+		var slider3 = $('.gallery-wrapper_1  .slider-block-inn').slick({
 			arrows:false,
 			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: false,
-			draggable: false
+			draggable: false,
+			swipe: false,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
-		let slider2 = $('.gallery-wrapper_2 .slider-block-inn').slick({
+		var slider2 = $('.gallery-wrapper_2 .slider-block-inn').slick({
 			arrows:false,
 			slidesToShow: 2,
 			slidesToScroll: 1,
 			infinite: false,
-			draggable: false
+			draggable: false,
+			swipe: false,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
 	}
 	$(document).on('click', '.gallery-wrapper_1 .slider-block-prev', function (e) {
