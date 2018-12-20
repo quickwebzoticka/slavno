@@ -8,9 +8,11 @@ $(document).ready(function(){
 			});
 			myMap.behaviors.disable('scrollZoom');
 			var myPlacemark = new ymaps.Placemark([59.785032, 29.952116], {}, {
-					preset: 'islands#darkGreenIcon'
+				iconLayout: 'default#image',
+				iconImageHref: 'assets/images/map-mark.png',
+				iconImageSize: [90, 110],
+				iconImageOffset: [-45, -65]
 			});
-			myMap.geoObjects.add(myPlacemark1);
 			myMap.geoObjects.add(myPlacemark);
 		});
 	}
@@ -131,23 +133,81 @@ $(document).ready(function(){
 			}
 		]
 	});
+	var sliderViewedUchastki = $('.viewed-block-main-inn').slick({
+		arrows:false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1366,
+				settings: {
+					slidesToShow: 3.5,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2.5,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 481,
+				settings: {
+					slidesToShow: 1.5,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					dots: true
+				}
+			}
+		]
+	});
 	watchSlider();
 
 	changedRangeInput($(document).find('#rangeInputFirstPrice'));
 	changedRangeInput($(document).find('#rangeInputSecondPrice'));
 	changedRangeInput($(document).find('#rangeInputFirstSquare'));
 	changedRangeInput($(document).find('#rangeInputSecondSquare'));
-	$(document).on('input', '#rangeInputFirstPrice, #rangeInputSecondPrice, #rangeInputFirstSquare, #rangeInputSecondSquare', function (e) {
+	changedRangeInput($(document).find('#rangeInputCost'));
+	changedRangeInput($(document).find('#rangeInputDate'));
+
+	$(document).on('input', '#rangeInputFirstPrice, #rangeInputSecondPrice, #rangeInputFirstSquare, #rangeInputSecondSquare, #rangeInputCost, #rangeInputDate', function (e) {
 		changedRangeInput($(this));
 		
 	});
-	$(document).on('input', '#firstPrice, #secondPrice, #firstSquare, #secondSquare', function (e) {
+	$(document).on('input', '#firstPrice, #secondPrice, #firstSquare, #secondSquare, #cost, #date', function (e) {
 		changedInput($(this));
 	});
 
 	$(document).find('.filter-block-right-comm__select').SumoSelect({
 		placeholder: 'Выберите из списка',
 		forceCustomRendering: true
+	});
+
+	$(document).on('click', '.popup-close', function () {
+		event.preventDefault();
+		$.fancybox.close();
+	});
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $('.popup-order'); // тут указываем класс элемента
+		if ($('.swal-overlay').is(e.target) || $('.swal-modal').is(e.target) || $('.swal-title').is(e.target) ||
+		$('.swal-text').is(e.target) || $('.swal-footer').is(e.target) || $('.swal-button-container').is(e.target) ||
+		$('.swal-button').is(e.target) || $('.swal-icon--warning__body').is(e.target) || $('.swal-text').is(e.target)||
+		$('.swal-icon--warning__body').is(e.target) || $('.swal-icon--warning__dot').is(e.target) || $('.swal-icon').is(e.target)){
+		   console.log(e);
+		    return false;
+		}
+		if (!div.is(e.target) && div.has(e.target).length === 0) { // если клик был не по нашему блоку и не по его дочерним элементам
+			$.fancybox.close();
+            return false;
+		}
 	});
 
 	var x = document.getElementsByName("input-vol");
@@ -171,19 +231,21 @@ function watchSlider(){
 	let sliderItems = $(document).find('.slider-block-item');
 	let sliderPrev = $(document).find('.slider-block-prev__img');
 	let sliderNext = $(document).find('.slider-block-next__img');
-	if( sliderItems[0].classList.contains("slick-active") ){
-		sliderPrev.attr("src", "assets/images/arrow-prev-disabled.png");
-		sliderPrev.attr("style", "cursor: auto");
-	} else {
-		sliderPrev.attr("src", "assets/images/arrow-prev.png");
-		sliderPrev.attr("style", "");
-	}
-	if( sliderItems[sliderItems.length-1].classList.contains("slick-active") ){
-		sliderNext.attr("src", "assets/images/arrow-next-disabled.png");
-		sliderNext.attr("style", "cursor: auto");
-	} else {
-		sliderNext.attr("src", "assets/images/arrow-next.png");
-		sliderNext.attr("style", "");
+	if(sliderItems.length != 0) {
+		if( sliderItems[0].classList.contains("slick-active") ){
+			sliderPrev.attr("src", "assets/images/arrow-prev-disabled.png");
+			sliderPrev.attr("style", "cursor: auto");
+		} else {
+			sliderPrev.attr("src", "assets/images/arrow-prev.png");
+			sliderPrev.attr("style", "");
+		}
+		if( sliderItems[sliderItems.length-1].classList.contains("slick-active") ){
+			sliderNext.attr("src", "assets/images/arrow-next-disabled.png");
+			sliderNext.attr("style", "cursor: auto");
+		} else {
+			sliderNext.attr("src", "assets/images/arrow-next.png");
+			sliderNext.attr("style", "");
+		}
 	}
 }
 

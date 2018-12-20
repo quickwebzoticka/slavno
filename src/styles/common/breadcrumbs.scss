@@ -24,17 +24,24 @@
 @include w1024{
 	.breadcrumbs{
 		margin-top: 50px;
-		padding-left: 0;
+		padding-left: 25px;
 		padding-right: 0;
+	}
+}
+@include w768{
+	.breadcrumbs{
+		padding-left: 20px;
 	}
 }
 @include w480{
 	.breadcrumbs{
 		margin-top: 30px;
+		padding-left: 15px;
 	}
 }
 @include w320{
 	.breadcrumbs{
-		margin-top: 20px;
+		margin-top: 30px;
+		padding-left: 10px;
 	}
 }

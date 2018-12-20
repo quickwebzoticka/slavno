@@ -1,0 +1,31 @@
+.wrap(style="display:none;")
+	.popup-order(id="popupOrderForm")
+		.popup-wrap
+			.popup-left
+				.popup-left__title Закажите <span>обратный звонок</span>
+				.popup-left__text Мы можем позвонить вам прямо сейчас или в другое рабочее время.
+				.popup-left__text Работаем с 9:00 до 20:00 по Москве.
+				.popup-left-pic
+					img.popup-left-pic__img(src="assets/images/popup-phone.png", alt="Телефон")
+			form.popup-right
+				.popup-right__label Как вас зовут
+				input.popup-right__input(type="text" name="name" id="name" placeholder="Андрей" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Андрей'")
+				.popup-right__label Телефон
+				input.popup-right__input(type="tel" name="tel" id="tel" placeholder="+7 812 999 23 44" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 812 999 23 44'")
+				.popup-right__label Выберите способ для связи
+				.popup-right-radios
+					input(type="radio" id="popupChoice1" name="contact" value="Позвонить" checked)
+					label.popupChoice1(for="popupChoice1") Позвонить
+					input(type="radio" id="popupChoice2" name="contact" value="Whatsapp")
+					label.popupChoice2(for="popupChoice2") Whatsapp
+					input(type="radio" id="popupChoice3" name="contact" value="Viber")
+					label.popupChoice3(for="popupChoice3") Viber
+					input(type="radio" id="popupChoice4" name="contact" value="Telegram")
+					label.popupChoice4(for="popupChoice4") Telegram
+				.popup-right-but
+					a.popup-right-but__link(href="#") Заказать звонок
+				.popup-right__info Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности
+		img.popup-close(src="assets/images/popup-close.png")
+		.popup-success
+			.popup-success__title Спасибо <span>за заявку</span>
+			.popup-success__text Мы свяжемся с вами в течении 15 минут  

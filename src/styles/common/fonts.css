@@ -1,0 +1,6 @@
+@font-face {
+	font-family: 'ALS Rubl';
+	font-style: normal;
+	font-weight: normal;
+	src: local('ALS Rubl'), url('rouble.woff') format('woff');
+}
