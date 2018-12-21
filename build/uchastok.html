@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Участок</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/sumoselect/sumoselect.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/sumoselect/jquery.sumoselect.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.fancybox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="assets/scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-menuActive-wrap"><img class="header-menuClose__img" src="assets/images/close.png" alt="Закрыть">
+        <nav class="header-menuActive"><a class="header-menu__item" href="index.html">Главная</a><a class="header-menu__item" href="#">Иннола Парк</a><a class="header-menu__item" href="#">Изумрудный Город</a><a class="header-menu__item" href="news.html">Новости и Акции</a><a class="header-menu__item" href="contacts.html">Контакты</a></nav>
+      </div>
+      <div class="header">
+        <div class="containerWide">
+          <div class="header-block">
+            <div class="header-logo"><img class="header-logo__img" src="assets/images/logo.png" alt="Логотип"></div>
+            <nav class="header-menu active"><a class="header-menu__item" href="index.html">Главная</a><a class="header-menu__item" href="#">Иннола Парк</a><a class="header-menu__item" href="#">Изумрудный Город</a><a class="header-menu__item" href="news.html">Новости и Акции</a><a class="header-menu__item" href="contacts.html">Контакты</a></nav>
+            <div class="header-menuMob">
+              <div class="header-menuMob-top"><img class="header-menuMob-top__img" src="assets/images/menu.png" alt="Меню">
+                <div class="header-menuMob-top__text">Меню</div>
+              </div><span class="header-menuMob__bot">Основные разделы сайта</span>
+            </div>
+            <div class="header-fav">
+              <div class="header-fav-top"><img class="header-fav-top__img" src="assets/images/fav.png" alt="Избранное"><span class="header-fav-top__text">Избранное</span><span class="header-fav-top__count">32</span></div><span class="header-fav__bot">Ваши отобранные участки</span>
+            </div>
+            <div class="header-tel">
+              <div class="header-tel-top"><img class="header-tel-top__img" src="assets/images/tel.png" alt="Телефон"><a class="header-tel-top__phone" href="tel:88125096607">8 812 509 66 07</a></div><span class="header-tel__bot">По всем интересующим вопросам</span>
+            </div>
+            <div class="header-but"><a class="header-but__link" href="#">Закажите звонок</a></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="breadcrumbs"> <a class="breadcrumbs-link" href="index.html">Главная</a><span class="breadcrumbs-sep">&rarr;</span><span class="breadcrumbs-notlink">title</span></div>
+        </div>
+      </div>
+      <div class="bg">
+        <div class="uchastok">
+          <div class="containerWide">
+            <div class="uchastok-wrap">
+              <div class="container">
+                <div class="uchastok-block">
+                  <h1 class="uchastok-block__title">Участок №666</h1>
+                  <div class="uchastok-block-main">
+                    <div class="uchastok-block-main-picture"><img class="uchastok-block-main-picture__img" src="assets/images/uchastok.png" alt="Участок"></div>
+                    <div class="uchastok-block-main-info">
+                      <div class="uchastok-block-main-info__title">Характеристики</div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Площадь</span><span class="uchastok-block-main-info-row__val">10 соток</span></div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Кадастровый номер</span><span class="uchastok-block-main-info-row__val">47:14:1203001:814</span></div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Дороги</span><span class="uchastok-block-main-info-row__val">Есть</span></div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Газоснабжение</span><span class="uchastok-block-main-info-row__val">Есть</span></div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Водоснабжение</span><span class="uchastok-block-main-info-row__val">Есть</span></div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Электричество</span><span class="uchastok-block-main-info-row__val">Есть</span></div>
+                      <div class="uchastok-block-main-info-row"><span class="uchastok-block-main-info-row__feature">Канализация</span><span class="uchastok-block-main-info-row__val">Есть</span></div>
+                    </div>
+                    <div class="uchastok-block-main-view">
+                      <div class="uchastok-block-main-view__info">Данный участок свободен и может стать вашим</div>
+                      <div class="uchastok-block-main-view__oldPrice"><span class="lineThrought">2 630 000</span> <span class="rub">q</span></div>
+                      <div class="uchastok-block-main-view-row">
+                        <div class="uchastok-block-main-view-row__newPrice">2 400 000 <span class="rub">q</span></div>
+                        <div class="uchastok-block-main-view-row__action"><span>Скидка 230 000</span> действует до 31.12.2018</div>
+                      </div>
+                      <div class="uchastok-block-main-view-row">
+                        <div class="uchastok-block-main-view-row-viewBut"><a class="uchastok-block-main-view-row-viewBut__link" href="#">Записаться на просмотр</a></div>
+                        <div class="uchastok-block-main-view-row-favBut"><a class="uchastok-block-main-view-row-favBut__link" href="#">Добавить в избранное</a></div>
+                      </div>
+                      <div class="uchastok-block-main-view-location">Коттеджный поселок «Иннола Парк» <span>Ломоносовский район</span></div>
+                      <div class="uchastok-block-main-view-row"> <a class="uchastok-block-main-view-row__link" href="#">Сохранить в PDF</a><a class="uchastok-block-main-view-row__link" href="#">Отправить на e–mail</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rassr">
+          <div class="container">
+            <div class="rassr-block">
+              <div class="rassr-block-left"><img class="rassr-block-left__img" src="assets/images/rassr.png" alt="Рассрочка"></div>
+              <form class="rassr-block-right" action="">
+                <div class="rassr-block-right__title">Беспроцентная <span>рассрочка</span></div>
+                <div class="rassr-block-right__text">Двигайте ползунки в калькуляторе, чтобы узнать условия рассрочки</div>
+                <div class="rassr-block-right-row">
+                  <div class="rassr-block-right-row-cost"> 
+                    <div class="rassr-block-right-row-cost__title">Первоначальный взнос</div>
+                    <div class="rassr-block-right-row-cost-inputs">
+                      <input class="rassr-block-right-row-cost-inputs__input" type="number" id="cost" name="input-vol" min="0" max="200">
+                      <input class="rassr-block-right-row-cost-inputs__rangeInput" type="range" min="0" max="200" value="50" step="1" id="rangeInputCost">
+                    </div>
+                  </div>
+                  <div class="rassr-block-right-row-time"> 
+                    <div class="rassr-block-right-row-time__title">Период рассрочки</div>
+                    <div class="rassr-block-right-row-time-inputs">
+                      <input class="rassr-block-right-row-time-inputs__input" type="number" id="date" name="input-vol" min="0" max="200">
+                      <input class="rassr-block-right-row-time-inputs__rangeInput" type="range" min="0" max="200" value="50" step="1" id="rangeInputDate">
+                    </div>
+                  </div>
+                  <div class="rassr-block-right-row-month"> 
+                    <div class="rassr-block-right-row-month__title">Ежемесячный платеж</div>
+                    <div class="rassr-block-right-row-month__output">120 000 <span>q</span></div>
+                  </div>
+                  <div class="rassr-block-right-row-day"> 
+                    <div class="rassr-block-right-row-day__title">Ежедневный платеж</div>
+                    <div class="rassr-block-right-row-day__output">3 870 <span>q</span></div>
+                  </div>
+                </div>
+                <label class="rassr-block-right-check">
+                  <input class="rassr-block-right-check__checkbox" type="checkbox" name="checkbox-test"><span class="rassr-block-right-check__checkboxCustom"></span><span class="rassr-block-right-check__label">С учетом инфраструктурных платежей</span>
+                </label>
+                <div class="rassr-block-right-but"><a class="rassr-block-right-but__link" href="#">Забронировать участок</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="viewed">
+          <div class="container">
+            <div class="viewed-block">
+              <div class="viewed-block__title">Недавно <span>просмотренные участки</span></div>
+              <div class="viewed-block-main">
+                <div class="viewed-block-main-inn">
+                  <div class="viewed-block-main-item">
+                    <div class="viewed-block-main-item-inn">
+                      <div class="viewed-block-main-item-inn-top"><img class="viewed-block-main-item-inn-top__img" src="assets/images/uchastok.jpg" alt="Участок">
+                        <div class="viewed-block-main-item-inn-top-advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-water.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-electric.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-kanal.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-roads.png" alt="advantage"></div><a class="viewed-block-main-item-inn-top-genplan" href="#"><img class="viewed-block-main-item-inn-top-genplan__img" src="assets/images/uchastok-genplan.png" alt="genplan">Посмотреть на ген. плане</a>
+                      </div>
+                      <div class="viewed-block-main-item-inn__info">Участок свободен и может стать вашим</div>
+                      <div class="viewed-block-main-item-inn__title">Участок №666</div>
+                      <div class="viewed-block-main-item-inn-square"><img class="viewed-block-main-item-inn-square__img" src="assets/images/uchastok-square.png" alt="Площадь">
+                        <div class="viewed-block-main-item-inn-square__text">8 соток</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-price"><img class="viewed-block-main-item-inn-price__img" src="assets/images/uchastok-price.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-price__text">1 200 350 руб.</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-info"><img class="viewed-block-main-item-inn-info__img" src="assets/images/uchastok-info.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-info__text">Беспроцентная рассрочка от 7 667 <span>q</span> в день</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-viewBut"><a class="viewed-block-main-item-inn-viewBut__link" href="#">Записаться на просмотр</a></div>
+                      <div class="viewed-block-main-item-inn-favBut"><a class="viewed-block-main-item-inn-favBut__link" href="#">Добавить в избранное</a></div>
+                    </div>
+                  </div>
+                  <div class="viewed-block-main-item">
+                    <div class="viewed-block-main-item-inn">
+                      <div class="viewed-block-main-item-inn-top"><img class="viewed-block-main-item-inn-top__img" src="assets/images/uchastok.jpg" alt="Участок">
+                        <div class="viewed-block-main-item-inn-top-advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-water.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-electric.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-kanal.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-roads.png" alt="advantage"></div><a class="viewed-block-main-item-inn-top-genplan" href="#"><img class="viewed-block-main-item-inn-top-genplan__img" src="assets/images/uchastok-genplan.png" alt="genplan">Посмотреть на ген. плане</a>
+                      </div>
+                      <div class="viewed-block-main-item-inn__info">Участок свободен и может стать вашим</div>
+                      <div class="viewed-block-main-item-inn__title">Участок №666</div>
+                      <div class="viewed-block-main-item-inn-square"><img class="viewed-block-main-item-inn-square__img" src="assets/images/uchastok-square.png" alt="Площадь">
+                        <div class="viewed-block-main-item-inn-square__text">8 соток</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-price"><img class="viewed-block-main-item-inn-price__img" src="assets/images/uchastok-price.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-price__text">1 200 350 руб.</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-info"><img class="viewed-block-main-item-inn-info__img" src="assets/images/uchastok-info.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-info__text">Беспроцентная рассрочка от 7 667 <span>q</span> в день</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-viewBut"><a class="viewed-block-main-item-inn-viewBut__link" href="#">Записаться на просмотр</a></div>
+                      <div class="viewed-block-main-item-inn-favBut"><a class="viewed-block-main-item-inn-favBut__link" href="#">Добавить в избранное</a></div>
+                    </div>
+                  </div>
+                  <div class="viewed-block-main-item">
+                    <div class="viewed-block-main-item-inn">
+                      <div class="viewed-block-main-item-inn-top"><img class="viewed-block-main-item-inn-top__img" src="assets/images/uchastok.jpg" alt="Участок">
+                        <div class="viewed-block-main-item-inn-top-advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-water.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-electric.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-kanal.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-roads.png" alt="advantage"></div><a class="viewed-block-main-item-inn-top-genplan" href="#"><img class="viewed-block-main-item-inn-top-genplan__img" src="assets/images/uchastok-genplan.png" alt="genplan">Посмотреть на ген. плане</a>
+                      </div>
+                      <div class="viewed-block-main-item-inn__info">Участок свободен и может стать вашим</div>
+                      <div class="viewed-block-main-item-inn__title">Участок №666</div>
+                      <div class="viewed-block-main-item-inn-square"><img class="viewed-block-main-item-inn-square__img" src="assets/images/uchastok-square.png" alt="Площадь">
+                        <div class="viewed-block-main-item-inn-square__text">8 соток</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-price"><img class="viewed-block-main-item-inn-price__img" src="assets/images/uchastok-price.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-price__text">1 200 350 руб.</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-info"><img class="viewed-block-main-item-inn-info__img" src="assets/images/uchastok-info.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-info__text">Беспроцентная рассрочка от 7 667 <span>q</span> в день</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-viewBut"><a class="viewed-block-main-item-inn-viewBut__link" href="#">Записаться на просмотр</a></div>
+                      <div class="viewed-block-main-item-inn-favBut"><a class="viewed-block-main-item-inn-favBut__link" href="#">Добавить в избранное</a></div>
+                    </div>
+                  </div>
+                  <div class="viewed-block-main-item">
+                    <div class="viewed-block-main-item-inn">
+                      <div class="viewed-block-main-item-inn-top"><img class="viewed-block-main-item-inn-top__img" src="assets/images/uchastok.jpg" alt="Участок">
+                        <div class="viewed-block-main-item-inn-top-advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-water.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-electric.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-kanal.png" alt="advantage"><img class="viewed-block-main-item-inn-top-advantage__img" src="assets/images/uchastok-roads.png" alt="advantage"></div><a class="viewed-block-main-item-inn-top-genplan" href="#"><img class="viewed-block-main-item-inn-top-genplan__img" src="assets/images/uchastok-genplan.png" alt="genplan">Посмотреть на ген. плане</a>
+                      </div>
+                      <div class="viewed-block-main-item-inn__info">Участок свободен и может стать вашим</div>
+                      <div class="viewed-block-main-item-inn__title">Участок №666</div>
+                      <div class="viewed-block-main-item-inn-square"><img class="viewed-block-main-item-inn-square__img" src="assets/images/uchastok-square.png" alt="Площадь">
+                        <div class="viewed-block-main-item-inn-square__text">8 соток</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-price"><img class="viewed-block-main-item-inn-price__img" src="assets/images/uchastok-price.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-price__text">1 200 350 руб.</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-info"><img class="viewed-block-main-item-inn-info__img" src="assets/images/uchastok-info.png" alt="Стоимость">
+                        <div class="viewed-block-main-item-inn-info__text">Беспроцентная рассрочка от 7 667 <span>q</span> в день</div>
+                      </div>
+                      <div class="viewed-block-main-item-inn-viewBut"><a class="viewed-block-main-item-inn-viewBut__link" href="#">Записаться на просмотр</a></div>
+                      <div class="viewed-block-main-item-inn-favBut"><a class="viewed-block-main-item-inn-favBut__link" href="#">Добавить в избранное</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="consult">
+          <div class="containerWide">
+            <div class="consult-wrap">
+              <div class="container">
+                <div class="consult-block">
+                  <div class="consult-block-left">
+                    <div class="consult-block-left__title">Остались вопросы<br> или <span>нужна консультация?</span></div>
+                    <div class="consult-block-left__text">Заполните два поля и в течении 5 минут с вами свяжется менеджер</div>
+                    <div class="consult-block-left-main">
+                      <form class="consult-block-left-main-form" action="">
+                        <div class="consult-block-left-main-form-pair">
+                          <label for="name">Как вас зовут</label>
+                          <input class="consult-block-left-main-form__name" type="text" name="name" id="name" placeholder="Андрей" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Андрей'">
+                        </div>
+                        <div class="consult-block-left-main-form-pair">
+                          <label for="tel">Телефон</label>
+                          <input class="consult-block-left-main-form__tel" type="tel" name="tel" id="tel" placeholder="+7 812 999 23 44" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 812 999 23 44'">
+                        </div>
+                      </form>
+                      <div class="consult-block-left-main-btn"> <a class="consult-block-left-main-btn__link" href="#">Заказать звонок</a></div>
+                    </div>
+                    <div class="consult-block-left__privacy">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с политикой конциденциальности</div>
+                  </div>
+                  <div class="consult-block-right"><img class="consult-block-right__img" src="assets/images/consult-tanya.jpg" alt="consult"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="containerWide">
+          <div class="footer-block">
+            <div class="footer-block-info">
+              <div class="footer-block-info-logo"><img class="footer-block-info-logo__img" src="assets/images/logo.png" alt="Логотип"></div>
+              <div class="footer-block-info-wrap-width">
+                <div class="footer-block-info__text">Лен. обл., Ломоносовский район, Аннинское городское поселение, коттеджный поселок «Изумрудный город» </div>
+                <div class="footer-block-info__pairText">
+                  <div class="footer-block-info__pairText__pair">ОГРН: 2659845165126334</div>
+                  <div class="footer-block-info__pairText__pair">БИК: 161843211459</div>
+                </div>
+              </div>
+              <div class="footer-block-info-wrap">
+                <div class="footer-block-info__text2">© Славные просторы 2018<br><a href="#">Политика конфиденциальности</a></div>
+                <div class="footer-block-info__pairText2">Сделано в<a href="#"><img class="footer-block-info__img" src="assets/images/footer-made.png" alt="RA"></a></div>
+              </div>
+            </div>
+            <div class="footer-block-menus">
+              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title in" href="#">Иннола Парк</a>
+                <div class="footer-block-menus-list-wrap"><a class="footer-block-menus-list__item" href="#">Запись на экскурсию</a><a class="footer-block-menus-list__item" href="#">Местонахождение</a><a class="footer-block-menus-list__item" href="#">Инфраструктура</a><a class="footer-block-menus-list__item" href="#">Экология</a><a class="footer-block-menus-list__item" href="#">Коммуникации</a><a class="footer-block-menus-list__item" href="#">Что построено</a><a class="footer-block-menus-list__item" href="#">Услуги</a><a class="footer-block-menus-list__item" href="#">Документация</a><a class="footer-block-menus-list__item" href="#">Выбор участка</a><a class="footer-block-menus-list__item" href="#">Акции</a></div>
+              </div>
+              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title in" href="#">Изумрудный город</a>
+                <div class="footer-block-menus-list-wrap"><a class="footer-block-menus-list__item" href="#">Запись на экскурсию</a><a class="footer-block-menus-list__item" href="#">Местонахождение</a><a class="footer-block-menus-list__item" href="#">Инфраструктура</a><a class="footer-block-menus-list__item" href="#">Экология</a><a class="footer-block-menus-list__item" href="#">Коммуникации</a><a class="footer-block-menus-list__item" href="#">Что построено</a><a class="footer-block-menus-list__item" href="#">Услуги</a><a class="footer-block-menus-list__item" href="#">Документация</a><a class="footer-block-menus-list__item" href="#">Выбор участка</a><a class="footer-block-menus-list__item" href="#">Акции</a></div>
+              </div>
+              <div class="footer-block-menus-list"><a class="footer-block-menus-list__title in" href="#">Новости и Акции</a>
+                <div class="footer-block-menus-list-wrap"><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a><a class="footer-block-menus-list__item" href="#">Текст из название новости</a></div>
+              </div>
+            </div>
+            <div class="footer-block-contacts">
+              <div class="footer-block-contacts-tel">
+                <div class="footer-block-contacts-tel-top"><img class="footer-block-contacts-tel-top__img" src="assets/images/tel.png" alt="Телефон"><a class="footer-block-contacts-tel-top__phone" href="tel:88125096607">8 812 509 66 07</a></div><span class="footer-block-contacts-tel__bot">По всем интересующим вопросам</span>
+              </div>
+              <div class="footer-block-contacts-but"><a class="footer-block-contacts-but__link" href="#">Закажите звонок</a></div>
+              <div class="footer-block-contacts-mail">
+                <div class="footer-block-contacts-mail-top"><img class="footer-block-contacts-mail-top__img" src="assets/images/mail.png" alt="Почта"><a class="footer-block-contacts-mail-top__mail" href="mailto:info@slavno.pro">info@slavno.pro </a></div><span class="footer-block-contacts-mail__bot">отвечаем в течении 30 минут</span>
+              </div>
+              <div class="footer-block-contacts-social">
+                <div class="footer-block-contacts-social-top"><a href="#"><img class="footer-block-contacts-social__vk" src="assets/images/social-vk.png" alt="vk"></a><a href="#"><img class="footer-block-contacts-social__inst" src="assets/images/social-inst.png" alt="inst"></a></div><span class="footer-block-contacts-social__bot">Подписка на нас в соц. сетях позволит получать актуальную информацию в первых рядах!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="wrap" style="display:none;">
+      <div class="popup-order" id="popupOrderForm">
+        <div class="popup-wrap">
+          <div class="popup-left">
+            <div class="popup-left__title">Закажите <span>обратный звонок</span></div>
+            <div class="popup-left__text">Мы можем позвонить вам прямо сейчас или в другое рабочее время.</div>
+            <div class="popup-left__text">Работаем с 9:00 до 20:00 по Москве.</div>
+            <div class="popup-left-pic"><img class="popup-left-pic__img" src="assets/images/popup-phone.png" alt="Телефон"></div>
+          </div>
+          <form class="popup-right">
+            <div class="popup-right__label">Как вас зовут</div>
+            <input class="popup-right__input" type="text" name="name" id="name" placeholder="Андрей" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Андрей'">
+            <div class="popup-right__label">Телефон</div>
+            <input class="popup-right__input" type="tel" name="tel" id="tel" placeholder="+7 812 999 23 44" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 812 999 23 44'">
+            <div class="popup-right__label">Выберите способ для связи</div>
+            <div class="popup-right-radios">
+              <input type="radio" id="popupChoice1" name="contact" value="Позвонить" checked>
+              <label class="popupChoice1" for="popupChoice1">Позвонить</label>
+              <input type="radio" id="popupChoice2" name="contact" value="Whatsapp">
+              <label class="popupChoice2" for="popupChoice2">Whatsapp</label>
+              <input type="radio" id="popupChoice3" name="contact" value="Viber">
+              <label class="popupChoice3" for="popupChoice3">Viber</label>
+              <input type="radio" id="popupChoice4" name="contact" value="Telegram">
+              <label class="popupChoice4" for="popupChoice4">Telegram</label>
+            </div>
+            <div class="popup-right-but"><a class="popup-right-but__link" href="#">Заказать звонок</a></div>
+            <div class="popup-right__info">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности</div>
+          </form>
+        </div><img class="popup-close" src="assets/images/popup-close.png">
+        <div class="popup-success">
+          <div class="popup-success__title">Спасибо <span>за заявку</span></div>
+          <div class="popup-success__text">Мы свяжемся с вами в течении 15 минут  </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

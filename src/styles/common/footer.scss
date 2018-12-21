@@ -202,11 +202,11 @@
 					content: "";
 					display: block;
 					position: absolute;
-					width: 100%;
+					width: 101%;
 					height: 47px;
 					z-index: 1;
 					top: 1px;
-					left: -1px;
+					left: -2px;
 					border-radius: 30px;
 				}
 				&:active:before{

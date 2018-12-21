@@ -9,14 +9,235 @@
 }
 .contacts{
 	padding-top: 160px;
+	margin-bottom: 75px;
 	&-wrap{
-		height: 900px;
     background-color: #fff;
     border-bottom: 10px solid #e0dddc;
     border-radius: 15px;
     box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.5);
 	}
 	&-block{
-		height: 100%;
+		padding-top: 60px;
+    padding-bottom: 75px;
+		&__title{
+			margin: 0;
+			margin-bottom: 30px;
+			font-size: 32px;
+			line-height: 32px;
+			font-family: 'Noto Serif', serif;
+			font-weight: bold;
+		}
+		&-main{
+			display: flex;
+			&__map{
+				width: 1050px; 
+				height: 680px;
+				border-radius: 10px;
+				overflow: hidden;
+				margin-right: 45px;
+			}
+			&-info-item{
+				width: 380px;
+				padding-bottom: 25px;
+				border-bottom: 1px solid #eaeaea;
+				&__title{
+					font-family: 'Noto Serif', serif;
+					font-size: 24px;
+					font-style: italic;
+					margin-bottom: 12px;
+					margin-top: 20px;
+				}
+				.contacts-block-main-info-wrap:first-child &:first-child &__title{
+					margin-top: 0;
+				}
+				&__text{
+					font-family: 'Noto Sans', serif;
+					font-size: 16px;
+					color: #585858;
+					line-height: 24px;
+				}
+				.contacts-block-main-info-wrap:last-child &:last-child{
+					border-bottom: none;
+				}
+				&__boldtext{
+					font-family: 'Noto Sans', serif;
+					font-size: 16px;
+					font-weight: bold;
+					margin-bottom: 5px;
+					display: inline-block;
+					color: #585858;
+				}
+				&__bolditalictext{
+					font-family: 'Noto Serif', serif;
+					font-weight: bold;
+					font-style: italic;
+					color: #76974e;
+					font-size: 16px;
+					display: inline-block;
+				}
+				&-socials__item{
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+}
+@include w1366{
+	.contacts{
+		padding-top: 150px;
+		&-block{
+			padding-top: 55px;
+			padding-left: 65px;
+			padding-right: 65px;
+			padding-bottom: 0;
+			&-main{
+				flex-direction: column;
+				&__map{
+					margin-right: 0;
+					width: 100%;
+					margin-bottom: 40px;
+				}
+				&-info{
+					&-wrap{
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: 40px;
+					}
+					&-wrap:first-child &-item:first-child{
+						width: 380px;
+					}
+					&-wrap:last-child &-item{
+						border-bottom: none;
+						padding-bottom: 0;
+					}
+					&-wrap:last-child &-item:last-child{
+						width: 410px;
+						margin-right: 193px;
+					}
+					&-item{
+						width: auto;
+						&__title{
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include w1024{
+	.contacts{
+		padding-top: 120px;
+		margin-bottom: 45px;
+		&-block{
+			padding-top: 50px;
+			padding-left: 0;
+			padding-right: 0;
+			&-main{
+				&__map{
+					height: 425px;
+				}
+				&-info{
+					&-wrap:first-child &-item:first-child{
+						width: 310px;
+					}
+					&-wrap:last-child &-item:last-child{
+						width: 390px;
+    				margin-right: 118px;
+					}
+					&-item{
+						&__title{
+							font-size: 19.2px;
+						}
+						&__text{
+							font-size: 12.8px;
+							line-height: 19px;
+						}
+						&__boldtext{
+							font-size: 12.8px;
+						}
+						&__bolditalictext{
+							font-size: 12.8px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include w768{
+	.contacts{
+		padding-top: 115px;
+		margin-bottom: 30px;
+		&-block{
+			padding-top: 45px;
+			&__title{
+				font-size: 24px;
+			}
+			&-main{
+				&-info{
+					&-wrap:first-child &-item:last-child{
+						display: none;
+					}
+					&-wrap:first-child &-item:nth-child(2){
+						margin-right: 70px;
+					}
+					&-wrap:last-child &-item:last-child{
+						width: 250px;
+						margin-right: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+@include w480{
+	.contacts{
+		padding-top: 75px;
+		&-block{
+			padding-top: 40px;
+			&-main{
+				&-info{
+					&-wrap{
+						margin-bottom: 0;
+    				flex-direction: column;
+					}
+					&-wrap:first-child &-item:first-child{
+						width: auto;
+					}
+					&-wrap:first-child &-item:nth-child(2){
+						margin-right: 0;
+					}
+					&-wrap:last-child &-item:first-child{
+						border-bottom: 1px solid #eaeaea;
+						padding-bottom: 25px;
+					}
+					&-wrap:last-child &-item:last-child{
+						width: auto;
+					}
+					&-item{
+						margin-bottom: 40px;
+
+					}
+				}
+			}
+		}
+	}
+}
+@include w320{
+	.contacts{
+		margin-bottom: 20px;
+		&-block{
+			&__title{
+				margin-bottom: 20px;
+			}
+			&-main{
+				&-info{
+					&-wrap:last-child &-item:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,201 @@
+extends ../template
+
+block variables
+	- var title = 'Участок'
+
+block content
+	.bg
+		.uchastok
+			.containerWide
+				.uchastok-wrap
+					.container
+						.uchastok-block
+							h1.uchastok-block__title Участок №666
+							.uchastok-block-main
+								.uchastok-block-main-picture
+									img.uchastok-block-main-picture__img(src="assets/images/uchastok.png", alt="Участок")
+								.uchastok-block-main-info
+									.uchastok-block-main-info__title Характеристики
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Площадь
+										span.uchastok-block-main-info-row__val 10 соток
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Кадастровый номер
+										span.uchastok-block-main-info-row__val 47:14:1203001:814
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Дороги
+										span.uchastok-block-main-info-row__val Есть
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Газоснабжение
+										span.uchastok-block-main-info-row__val Есть
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Водоснабжение
+										span.uchastok-block-main-info-row__val Есть
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Электричество
+										span.uchastok-block-main-info-row__val Есть
+									.uchastok-block-main-info-row
+										span.uchastok-block-main-info-row__feature Канализация
+										span.uchastok-block-main-info-row__val Есть
+								.uchastok-block-main-view
+									.uchastok-block-main-view__info Данный участок свободен и может стать вашим
+									.uchastok-block-main-view__oldPrice <span class="lineThrought">2 630 000</span> <span class="rub">q</span>
+									.uchastok-block-main-view-row
+										.uchastok-block-main-view-row__newPrice 2 400 000 <span class="rub">q</span>
+										.uchastok-block-main-view-row__action <span>Скидка 230 000</span> действует до 31.12.2018
+									.uchastok-block-main-view-row
+										.uchastok-block-main-view-row-viewBut
+											a.uchastok-block-main-view-row-viewBut__link(href="#") Записаться на просмотр
+										.uchastok-block-main-view-row-favBut
+											a.uchastok-block-main-view-row-favBut__link(href="#") Добавить в избранное
+									.uchastok-block-main-view-location Коттеджный поселок «Иннола Парк» <span>Ломоносовский район</span>
+									.uchastok-block-main-view-row 
+										a.uchastok-block-main-view-row__link(href="#") Сохранить в PDF
+										a.uchastok-block-main-view-row__link(href="#") Отправить на e–mail
+		.rassr
+			.container
+				.rassr-block
+					.rassr-block-left
+						img.rassr-block-left__img(src="assets/images/rassr.png", alt="Рассрочка")
+					form.rassr-block-right(action="")
+						.rassr-block-right__title Беспроцентная <span>рассрочка</span>
+						.rassr-block-right__text Двигайте ползунки в калькуляторе, чтобы узнать условия рассрочки
+						.rassr-block-right-row
+							.rassr-block-right-row-cost 
+								.rassr-block-right-row-cost__title Первоначальный взнос
+								.rassr-block-right-row-cost-inputs
+									input.rassr-block-right-row-cost-inputs__input(type="number" id="cost" name="input-vol" min="0" max="200")
+									input.rassr-block-right-row-cost-inputs__rangeInput(type="range" min="0" max="200" value="50" step="1" id="rangeInputCost")
+							.rassr-block-right-row-time 
+								.rassr-block-right-row-time__title Период рассрочки
+								.rassr-block-right-row-time-inputs
+									input.rassr-block-right-row-time-inputs__input(type="number" id="date" name="input-vol" min="0" max="200")
+									input.rassr-block-right-row-time-inputs__rangeInput(type="range" min="0" max="200" value="50" step="1" id="rangeInputDate")
+							.rassr-block-right-row-month 
+								.rassr-block-right-row-month__title Ежемесячный платеж
+								.rassr-block-right-row-month__output 120 000 <span>q</span>
+							.rassr-block-right-row-day 
+								.rassr-block-right-row-day__title Ежедневный платеж
+								.rassr-block-right-row-day__output 3 870 <span>q</span>
+						label.rassr-block-right-check
+							input.rassr-block-right-check__checkbox(type="checkbox" name="checkbox-test")
+							span.rassr-block-right-check__checkboxCustom
+							span.rassr-block-right-check__label С учетом инфраструктурных платежей
+						.rassr-block-right-but
+							a.rassr-block-right-but__link(href="#") Забронировать участок
+		.viewed
+			.container
+				.viewed-block
+					.viewed-block__title Недавно <span>просмотренные участки</span>
+					.viewed-block-main
+						.viewed-block-main-inn
+							.viewed-block-main-item
+								.viewed-block-main-item-inn
+									.viewed-block-main-item-inn-top
+										img.viewed-block-main-item-inn-top__img(src="assets/images/uchastok.jpg", alt="Участок")
+										.viewed-block-main-item-inn-top-advantage
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-water.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-electric.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-kanal.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-roads.png", alt="advantage")
+										a.viewed-block-main-item-inn-top-genplan(href="#")
+											img.viewed-block-main-item-inn-top-genplan__img(src="assets/images/uchastok-genplan.png", alt="genplan")
+											| Посмотреть на ген. плане
+									.viewed-block-main-item-inn__info Участок свободен и может стать вашим
+									.viewed-block-main-item-inn__title Участок №666
+									.viewed-block-main-item-inn-square
+										img.viewed-block-main-item-inn-square__img(src="assets/images/uchastok-square.png", alt="Площадь")
+										.viewed-block-main-item-inn-square__text 8 соток
+									.viewed-block-main-item-inn-price
+										img.viewed-block-main-item-inn-price__img(src="assets/images/uchastok-price.png", alt="Стоимость")
+										.viewed-block-main-item-inn-price__text 1 200 350 руб.
+									.viewed-block-main-item-inn-info
+										img.viewed-block-main-item-inn-info__img(src="assets/images/uchastok-info.png", alt="Стоимость")
+										.viewed-block-main-item-inn-info__text Беспроцентная рассрочка от 7 667 <span>q</span> в день
+									.viewed-block-main-item-inn-viewBut
+										a.viewed-block-main-item-inn-viewBut__link(href="#") Записаться на просмотр
+									.viewed-block-main-item-inn-favBut
+										a.viewed-block-main-item-inn-favBut__link(href="#") Добавить в избранное
+							.viewed-block-main-item
+								.viewed-block-main-item-inn
+									.viewed-block-main-item-inn-top
+										img.viewed-block-main-item-inn-top__img(src="assets/images/uchastok.jpg", alt="Участок")
+										.viewed-block-main-item-inn-top-advantage
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-water.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-electric.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-kanal.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-roads.png", alt="advantage")
+										a.viewed-block-main-item-inn-top-genplan(href="#")
+											img.viewed-block-main-item-inn-top-genplan__img(src="assets/images/uchastok-genplan.png", alt="genplan")
+											| Посмотреть на ген. плане
+									.viewed-block-main-item-inn__info Участок свободен и может стать вашим
+									.viewed-block-main-item-inn__title Участок №666
+									.viewed-block-main-item-inn-square
+										img.viewed-block-main-item-inn-square__img(src="assets/images/uchastok-square.png", alt="Площадь")
+										.viewed-block-main-item-inn-square__text 8 соток
+									.viewed-block-main-item-inn-price
+										img.viewed-block-main-item-inn-price__img(src="assets/images/uchastok-price.png", alt="Стоимость")
+										.viewed-block-main-item-inn-price__text 1 200 350 руб.
+									.viewed-block-main-item-inn-info
+										img.viewed-block-main-item-inn-info__img(src="assets/images/uchastok-info.png", alt="Стоимость")
+										.viewed-block-main-item-inn-info__text Беспроцентная рассрочка от 7 667 <span>q</span> в день
+									.viewed-block-main-item-inn-viewBut
+										a.viewed-block-main-item-inn-viewBut__link(href="#") Записаться на просмотр
+									.viewed-block-main-item-inn-favBut
+										a.viewed-block-main-item-inn-favBut__link(href="#") Добавить в избранное
+							.viewed-block-main-item
+								.viewed-block-main-item-inn
+									.viewed-block-main-item-inn-top
+										img.viewed-block-main-item-inn-top__img(src="assets/images/uchastok.jpg", alt="Участок")
+										.viewed-block-main-item-inn-top-advantage
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-water.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-electric.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-kanal.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-roads.png", alt="advantage")
+										a.viewed-block-main-item-inn-top-genplan(href="#")
+											img.viewed-block-main-item-inn-top-genplan__img(src="assets/images/uchastok-genplan.png", alt="genplan")
+											| Посмотреть на ген. плане
+									.viewed-block-main-item-inn__info Участок свободен и может стать вашим
+									.viewed-block-main-item-inn__title Участок №666
+									.viewed-block-main-item-inn-square
+										img.viewed-block-main-item-inn-square__img(src="assets/images/uchastok-square.png", alt="Площадь")
+										.viewed-block-main-item-inn-square__text 8 соток
+									.viewed-block-main-item-inn-price
+										img.viewed-block-main-item-inn-price__img(src="assets/images/uchastok-price.png", alt="Стоимость")
+										.viewed-block-main-item-inn-price__text 1 200 350 руб.
+									.viewed-block-main-item-inn-info
+										img.viewed-block-main-item-inn-info__img(src="assets/images/uchastok-info.png", alt="Стоимость")
+										.viewed-block-main-item-inn-info__text Беспроцентная рассрочка от 7 667 <span>q</span> в день
+									.viewed-block-main-item-inn-viewBut
+										a.viewed-block-main-item-inn-viewBut__link(href="#") Записаться на просмотр
+									.viewed-block-main-item-inn-favBut
+										a.viewed-block-main-item-inn-favBut__link(href="#") Добавить в избранное
+							.viewed-block-main-item
+								.viewed-block-main-item-inn
+									.viewed-block-main-item-inn-top
+										img.viewed-block-main-item-inn-top__img(src="assets/images/uchastok.jpg", alt="Участок")
+										.viewed-block-main-item-inn-top-advantage
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-water.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-electric.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-kanal.png", alt="advantage")
+											img.viewed-block-main-item-inn-top-advantage__img(src="assets/images/uchastok-roads.png", alt="advantage")
+										a.viewed-block-main-item-inn-top-genplan(href="#")
+											img.viewed-block-main-item-inn-top-genplan__img(src="assets/images/uchastok-genplan.png", alt="genplan")
+											| Посмотреть на ген. плане
+									.viewed-block-main-item-inn__info Участок свободен и может стать вашим
+									.viewed-block-main-item-inn__title Участок №666
+									.viewed-block-main-item-inn-square
+										img.viewed-block-main-item-inn-square__img(src="assets/images/uchastok-square.png", alt="Площадь")
+										.viewed-block-main-item-inn-square__text 8 соток
+									.viewed-block-main-item-inn-price
+										img.viewed-block-main-item-inn-price__img(src="assets/images/uchastok-price.png", alt="Стоимость")
+										.viewed-block-main-item-inn-price__text 1 200 350 руб.
+									.viewed-block-main-item-inn-info
+										img.viewed-block-main-item-inn-info__img(src="assets/images/uchastok-info.png", alt="Стоимость")
+										.viewed-block-main-item-inn-info__text Беспроцентная рассрочка от 7 667 <span>q</span> в день
+									.viewed-block-main-item-inn-viewBut
+										a.viewed-block-main-item-inn-viewBut__link(href="#") Записаться на просмотр
+									.viewed-block-main-item-inn-favBut
+										a.viewed-block-main-item-inn-favBut__link(href="#") Добавить в избранное
+							
+		include ../common/consult.pug

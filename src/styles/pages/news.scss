@@ -154,13 +154,13 @@
 	.news{
 		padding-top: 170px;
 		&-block{
-			padding-left: 0;
+			padding-left: 25px;
 			padding-right: 0;
 			&-top{
 				padding-right: 20px;
 			}
 			&-main-item{
-				width: 298px;
+				width: 295px;
 				height: 360px;
 				&-inn__title{
 					font-size: 15px;
@@ -176,7 +176,9 @@
 }
 @include w768{
 	.news{
+		padding-top: 160px;
 		&-block{
+			padding-left: 20px;
 			&-top{
 				&__title{
 					font-size: 28px;
@@ -190,7 +192,7 @@
 				}
 			}
 			&-main-item{
-				width: 336px;
+				width: 334px;
 				height: 390px;
 				&-inn__title{
 					font-size: 17px;
@@ -209,9 +211,10 @@
 }
 @include w480{
 	.news{
-		padding-top: 110px;
+		padding-top: 115px;
 		margin-bottom: 20px;
 		&-block{
+			padding-left: 15px;
 			&-top{
 				flex-direction: column;
 				align-items: flex-start;
@@ -230,8 +233,8 @@
 }
 @include w320{
 	.news{
-		padding-top: 105px;
 		&-block{
+			padding-left: 10px;
 			&-top{
 				margin-bottom: 20px;
 				&__title{

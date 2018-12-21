@@ -12,25 +12,29 @@ block content
 						.contacts-block
 							h1.contacts-block__title Контакты
 							.contacts-block-main
-								.contacts-block-main__map#YMapsID(style="width: 100%; height: 100%;")
+								.contacts-block-main__map#YMapsID
 								.contacts-block-main-info
-									.contacts-block-main-info-item
-										.contacts-block-main-info-item__title Адрес
-										.contacts-block-main-info-item__text Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок 
-									.contacts-block-main-info-item
-										.contacts-block-main-info-item__title Время работы
-										.contacts-block-main-info-item__boldtext 11:00 – 18:30
-										.contacts-block-main-info-item__text кроме воскресенья и понедельника
-									.contacts-block-main-info-item
-										.contacts-block-main-info-item__title Телефон
-										.contacts-block-main-info-item__boldtext 8 812 509 66 07
-										.contacts-block-main-info-item__text звоните по всем вопросам
-									.contacts-block-main-info-item
-										.contacts-block-main-info-item__title E-mail
-										.contacts-block-main-info-item__bolditalictext info@slavno.pro
-									.contacts-block-main-info-item
-										.contacts-block-main-info-item__title Адрес
-										.contacts-block-main-info-item__text Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок 
-
-
+									.contacts-block-main-info-wrap
+										.contacts-block-main-info-item
+											.contacts-block-main-info-item__title Адрес
+											.contacts-block-main-info-item__text Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок 
+										.contacts-block-main-info-item
+											.contacts-block-main-info-item__title Время работы
+											.contacts-block-main-info-item__boldtext 11:00 – 18:30
+											.contacts-block-main-info-item__text кроме воскресенья и понедельника
+										.contacts-block-main-info-item
+											.contacts-block-main-info-item__title Телефон
+											a.contacts-block-main-info-item__boldtext(href="tel:88125096607") 8 812 509 66 07
+											.contacts-block-main-info-item__text звоните по всем вопросам
+									.contacts-block-main-info-wrap
+										.contacts-block-main-info-item
+											.contacts-block-main-info-item__title E-mail
+											a.contacts-block-main-info-item__bolditalictext(href="mailto:info@slavno.pro") info@slavno.pro
+										.contacts-block-main-info-item
+											.contacts-block-main-info-item__title Мы в соц.сетях
+											.contacts-block-main-info-item-socials 
+												img.contacts-block-main-info-item-socials__item(src="assets/images/social-vk.png", alt="vkontakte")
+												img.contacts-block-main-info-item-socials__item(src="assets/images/fb.png", alt="facebook")
+												img.contacts-block-main-info-item-socials__item(src="assets/images/social-inst.png", alt="instagram")
+											.contacts-block-main-info-item__text  Подписка на нас в соц. сетях  позволит получать актуальную информацию в первых рядах!
 		include ../common/consult.pug
