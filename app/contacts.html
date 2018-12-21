@@ -12,11 +12,13 @@
     <link rel="stylesheet" type="text/css" href="assets/scripts/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="assets/scripts/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/scripts/sumoselect/sumoselect.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/styles/app.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/scripts/sumoselect/jquery.sumoselect.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery.fancybox.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="assets/scripts/main.js"></script>
   </head>
@@ -56,29 +58,32 @@
                 <div class="contacts-block">
                   <h1 class="contacts-block__title">Контакты</h1>
                   <div class="contacts-block-main">
-                    <div class="contacts-block-main__map" id="YMapsID" style="width: 100%; height: 100%;"></div>
+                    <div class="contacts-block-main__map" id="YMapsID"></div>
                     <div class="contacts-block-main-info">
-                      <div class="contacts-block-main-info-item">
-                        <div class="contacts-block-main-info-item__title">Адрес</div>
-                        <div class="contacts-block-main-info-item__text">Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок </div>
+                      <div class="contacts-block-main-info-wrap">
+                        <div class="contacts-block-main-info-item">
+                          <div class="contacts-block-main-info-item__title">Адрес</div>
+                          <div class="contacts-block-main-info-item__text">Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок </div>
+                        </div>
+                        <div class="contacts-block-main-info-item">
+                          <div class="contacts-block-main-info-item__title">Время работы</div>
+                          <div class="contacts-block-main-info-item__boldtext">11:00 – 18:30</div>
+                          <div class="contacts-block-main-info-item__text">кроме воскресенья и понедельника</div>
+                        </div>
+                        <div class="contacts-block-main-info-item">
+                          <div class="contacts-block-main-info-item__title">Телефон</div><a class="contacts-block-main-info-item__boldtext" href="tel:88125096607">8 812 509 66 07</a>
+                          <div class="contacts-block-main-info-item__text">звоните по всем вопросам</div>
+                        </div>
                       </div>
-                      <div class="contacts-block-main-info-item">
-                        <div class="contacts-block-main-info-item__title">Время работы</div>
-                        <div class="contacts-block-main-info-item__boldtext">11:00 – 18:30</div>
-                        <div class="contacts-block-main-info-item__text">кроме воскресенья и понедельника</div>
-                      </div>
-                      <div class="contacts-block-main-info-item">
-                        <div class="contacts-block-main-info-item__title">Телефон</div>
-                        <div class="contacts-block-main-info-item__boldtext">8 812 509 66 07</div>
-                        <div class="contacts-block-main-info-item__text">звоните по всем вопросам</div>
-                      </div>
-                      <div class="contacts-block-main-info-item">
-                        <div class="contacts-block-main-info-item__title">E-mail</div>
-                        <div class="contacts-block-main-info-item__bolditalictext">info@slavno.pro</div>
-                      </div>
-                      <div class="contacts-block-main-info-item">
-                        <div class="contacts-block-main-info-item__title">Адрес</div>
-                        <div class="contacts-block-main-info-item__text">Ленинградская область, Ломоносовский район, Аннинское городское поселение, коттеджный поселок </div>
+                      <div class="contacts-block-main-info-wrap">
+                        <div class="contacts-block-main-info-item">
+                          <div class="contacts-block-main-info-item__title">E-mail</div><a class="contacts-block-main-info-item__bolditalictext" href="mailto:info@slavno.pro">info@slavno.pro</a>
+                        </div>
+                        <div class="contacts-block-main-info-item">
+                          <div class="contacts-block-main-info-item__title">Мы в соц.сетях</div>
+                          <div class="contacts-block-main-info-item-socials"> <img class="contacts-block-main-info-item-socials__item" src="assets/images/social-vk.png" alt="vkontakte"><img class="contacts-block-main-info-item-socials__item" src="assets/images/fb.png" alt="facebook"><img class="contacts-block-main-info-item-socials__item" src="assets/images/social-inst.png" alt="instagram"></div>
+                          <div class="contacts-block-main-info-item__text"> Подписка на нас в соц. сетях  позволит получать актуальную информацию в первых рядах!</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -151,7 +156,7 @@
               </div>
               <div class="footer-block-contacts-but"><a class="footer-block-contacts-but__link" href="#">Закажите звонок</a></div>
               <div class="footer-block-contacts-mail">
-                <div class="footer-block-contacts-mail-top"><img class="footer-block-contacts-mail-top__img" src="assets/images/mail.png" alt="Почта"><a class="footer-block-contacts-mail-top__mail" href="tel:88125096607">info@slavno.pro </a></div><span class="footer-block-contacts-mail__bot">отвечаем в течении 30 минут</span>
+                <div class="footer-block-contacts-mail-top"><img class="footer-block-contacts-mail-top__img" src="assets/images/mail.png" alt="Почта"><a class="footer-block-contacts-mail-top__mail" href="mailto:info@slavno.pro">info@slavno.pro </a></div><span class="footer-block-contacts-mail__bot">отвечаем в течении 30 минут</span>
               </div>
               <div class="footer-block-contacts-social">
                 <div class="footer-block-contacts-social-top"><a href="#"><img class="footer-block-contacts-social__vk" src="assets/images/social-vk.png" alt="vk"></a><a href="#"><img class="footer-block-contacts-social__inst" src="assets/images/social-inst.png" alt="inst"></a></div><span class="footer-block-contacts-social__bot">Подписка на нас в соц. сетях позволит получать актуальную информацию в первых рядах!</span>
@@ -160,6 +165,41 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="wrap" style="display:none;">
+      <div class="popup-order" id="popupOrderForm">
+        <div class="popup-wrap">
+          <div class="popup-left">
+            <div class="popup-left__title">Закажите <span>обратный звонок</span></div>
+            <div class="popup-left__text">Мы можем позвонить вам прямо сейчас или в другое рабочее время.</div>
+            <div class="popup-left__text">Работаем с 9:00 до 20:00 по Москве.</div>
+            <div class="popup-left-pic"><img class="popup-left-pic__img" src="assets/images/popup-phone.png" alt="Телефон"></div>
+          </div>
+          <form class="popup-right">
+            <div class="popup-right__label">Как вас зовут</div>
+            <input class="popup-right__input" type="text" name="name" id="name" placeholder="Андрей" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Андрей'">
+            <div class="popup-right__label">Телефон</div>
+            <input class="popup-right__input" type="tel" name="tel" id="tel" placeholder="+7 812 999 23 44" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 812 999 23 44'">
+            <div class="popup-right__label">Выберите способ для связи</div>
+            <div class="popup-right-radios">
+              <input type="radio" id="popupChoice1" name="contact" value="Позвонить" checked>
+              <label class="popupChoice1" for="popupChoice1">Позвонить</label>
+              <input type="radio" id="popupChoice2" name="contact" value="Whatsapp">
+              <label class="popupChoice2" for="popupChoice2">Whatsapp</label>
+              <input type="radio" id="popupChoice3" name="contact" value="Viber">
+              <label class="popupChoice3" for="popupChoice3">Viber</label>
+              <input type="radio" id="popupChoice4" name="contact" value="Telegram">
+              <label class="popupChoice4" for="popupChoice4">Telegram</label>
+            </div>
+            <div class="popup-right-but"><a class="popup-right-but__link" href="#">Заказать звонок</a></div>
+            <div class="popup-right__info">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с политикой конфиденциальности</div>
+          </form>
+        </div><img class="popup-close" src="assets/images/popup-close.png">
+        <div class="popup-success">
+          <div class="popup-success__title">Спасибо <span>за заявку</span></div>
+          <div class="popup-success__text">Мы свяжемся с вами в течении 15 минут  </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
