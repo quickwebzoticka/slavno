@@ -524,6 +524,10 @@
 			margin-top: 100px
 			.benefits-text_2
 				margin-right: 10px
+				padding-left: 20px
+		@include wide-desctop
+			.benefits-text_2
+				padding-left: 20px
 		@include mob
 			justify-content: flex-start
 			padding: 0 20px
@@ -582,6 +586,8 @@
 	margin-left: -48%
 	@include desctop
 		width: 900px
+	@include tablet
+		width: 600px
 	@include mob
 		width: 300px
 	.slider-block-prev
@@ -593,10 +599,15 @@
 	&_2
 		margin-left: 0
 		margin-right: -48%
+		@include wide-desctop
+			margin-right: -30%
 		@include desctop
 			margin-right: -30%
 		@include tablet
-			margin-right: -30%
+			margin-right: -20%
+		@include mob
+			margin-right: 0%
+		
 		.slider-block-prev
 			left: 30px
 			right: unset
@@ -605,10 +616,15 @@
 			right: unset
 	&_1
 		margin-right: 50px
+		@include wide-desctop
+			margin-left: -30%
 		@include desctop
 			margin-left: -30%
 		@include tablet
-			margin-left: -30%
+			margin-left: -20%
+		@include mob
+			margin-left: 0%
+		
 
 
 .block__head_lined
@@ -649,12 +665,15 @@
 
 .doverie-block-main__img_shift-right
 	transform: translate(20px, 0)
+	@include desctop
+		transform: translate(-60px, 0)
 	@include tablet
 		transform: translate(0px, 55px)
 	@include mob-mini
 		transform: translate(0px, 71px)
 	@include mob-micro
 		transform: translate(0px, 15px)
+
 
 .doverie-block-main-left_wh
 	width: 685px

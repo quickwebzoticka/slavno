@@ -5,6 +5,10 @@ $mob-micro: 375px
 $mob: 768px
 $tablet: 1024px
 
+@mixin wide-desctop
+	@media screen and (min-width: $desctop)
+		@content
+
 @mixin desctop
 	@media screen and (max-width: $desctop)
 		@content
